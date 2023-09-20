@@ -1,17 +1,22 @@
 <template>
-  <div class="card max-w-sm md:max-w-none max-h-96 bg-base-100 shadow-xl">
+  <div class="card">
     <figure>
-      <img src="https://placehold.co/512" alt="Shoes" />
+      <img src="https://placehold.co/372" :alt="title" />
     </figure>
     <div class="card-body">
       <h2 class="card-title">
         {{ title }}
-        <div v-if="newProject" class="badge badge-secondary">NEW</div>
+        <div v-if="newProject" class="badge badge-secondary-theme">NEW</div>
       </h2>
       <p>{{ desc }}</p>
       <div class="card-actions justify-end">
-        <div class="badge badge-outline">{{ badges[0] }}</div>
-        <div class="badge badge-outline">{{ badges[1] }}</div>
+        <div
+          v-for="(badge, index) in badges"
+          :key="index"
+          class="badge badge-outline"
+        >
+          {{ badge }}
+        </div>
       </div>
     </div>
   </div>
