@@ -8,10 +8,15 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      borderRadius: {
+        inherit: "inherit",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-    themes: false,
+    themes: ["emerald", "halloween", "aqua"],
+    // darkTheme: "night",
   },
 };
