@@ -14,8 +14,8 @@
             <a href="https://linkedin.com/in/tmthyadms">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="32"
+                height="32"
                 fill="#0072b1"
                 class="bi bi-linkedin"
                 viewBox="0 0 16 16"
@@ -30,8 +30,8 @@
             <a href="https://github.com/tmthyadms">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="32"
+                height="32"
                 fill="#171515"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
@@ -43,13 +43,31 @@
             </a>
           </div>
         </div>
-        <button class="btn btn-primary btn-wide">Resume</button>
+        <button class="btn btn-primary-theme btn-wide mr-2">View Resume</button>
+        <span
+          >or download it
+          <a
+            href="@/assets/resume.pdf"
+            class="link link-info"
+            download="timothy-resume.pdf"
+            >here</a
+          ></span
+        >
       </div>
-      <img
+      <!-- <img
         src="https://placehold.co/256"
         alt="Profile picture"
         class="rounded-full shadow-inner"
-      />
+      /> -->
+      <div
+        class="w-[256px] h-[256px] rounded-full shadow-inner overflow-hidden"
+      >
+        <img
+          src="@/assets/profile-pic.jpg"
+          alt="Profile picture"
+          class="transition-transform duration-500 hover:scale-150"
+        />
+      </div>
     </div>
   </div>
 </template>
