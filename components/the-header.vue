@@ -2,11 +2,13 @@
   <header class="navbar">
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl"
-        >Timothy <span class="text-info">Adams</span></a
+        >Timothy <span class="text-accent-theme">Adams</span></a
       >
     </div>
     <div id="mode" class="tooltip tooltip-left" data-tip="">
-      <label class="btn btn-circle swap swap-rotate mr-4">
+      <label
+        class="btn btn-circle swap swap-rotate mr-4 bg-secondary-theme text-secondary-content-theme border-[hsl(var(--sf))]"
+      >
         <input type="checkbox" v-model="swap" />
         <div class="swap-off">
           <svg
@@ -52,11 +54,13 @@ export default {
   data() {
     return {
       swap: false,
+      light: "emerald",
+      dark: "halloween",
     };
   },
   watch: {
     swap(newVal) {
-      document.body.dataset.theme = newVal ? "dark" : "light";
+      document.body.parentNode.dataset.theme = newVal ? this.dark : this.light;
       document.getElementById("mode").dataset.tip = newVal
         ? "Dark mode"
         : "Light mode";
@@ -65,7 +69,7 @@ export default {
   },
   mounted() {
     const isDark = JSON.parse(localStorage.getItem("isDark"));
-    document.body.dataset.theme = isDark ? "dark" : "light";
+    document.body.parentNode.dataset.theme = isDark ? this.dark : this.light;
     document.getElementById("mode").dataset.tip = isDark
       ? "Dark mode"
       : "Light mode";

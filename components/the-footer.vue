@@ -7,9 +7,9 @@
           <a href="https://linkedin.com/in/tmthyadms">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="#0072b1"
+              width="32"
+              height="32"
+              fill="currentColor"
               class="bi bi-linkedin"
               viewBox="0 0 16 16"
             >
@@ -23,9 +23,9 @@
           <a href="https://github.com/tmthyadms">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="#171515"
+              width="32"
+              height="32"
+              fill="currentColor"
               class="bi bi-github"
               viewBox="0 0 16 16"
             >
