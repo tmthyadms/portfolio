@@ -43,7 +43,7 @@
       </div>
       <div class="avatar">
         <div
-          class="w-64 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
+          class="w-64 rounded-full outline outline-4 outline-primary outline-offset-4"
         >
           <img
             src="profile-pic.jpg"
