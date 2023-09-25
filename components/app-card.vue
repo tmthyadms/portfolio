@@ -1,19 +1,19 @@
 <template>
   <div class="card">
-    <figure>
-      <img src="https://placehold.co/372" :alt="title" />
+    <figure v-if="imgSrc">
+      <img :src="imgSrc" :alt="title" />
     </figure>
     <div class="card-body">
       <h2 class="card-title">
         {{ title }}
-        <div v-if="newProject" class="badge badge-secondary-theme">NEW</div>
+        <div v-if="badge" class="badge badge-primary">{{ badge }}</div>
       </h2>
       <p>{{ desc }}</p>
       <div class="card-actions justify-end">
         <div
           v-for="(badge, index) in badges"
           :key="index"
-          class="badge badge-outline"
+          class="badge badge-outline badge-primary"
         >
           {{ badge }}
         </div>
@@ -33,9 +33,11 @@ export default {
       type: String,
       required: true,
     },
-    newProject: {
-      type: Boolean,
-      default: false,
+    imgSrc: {
+      type: String,
+    },
+    badge: {
+      type: String,
     },
     badges: {
       type: Array,
@@ -44,5 +46,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>
