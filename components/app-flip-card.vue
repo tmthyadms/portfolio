@@ -11,17 +11,14 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style scoped>
 .flip-card {
+  @apply card;
   perspective: 1000px;
 }
 
 .flip-card-inner {
-  @apply relative w-full h-full transition-transform duration-700;
+  @apply relative w-full h-full rounded-[inherit] transition-transform duration-700;
   transform-style: preserve-3d;
 }
 
@@ -31,11 +28,19 @@ export default {};
 
 .flip-card-front,
 .flip-card-back {
-  @apply absolute w-full h-full;
+  @apply absolute w-full h-full rounded-[inherit];
   backface-visibility: hidden;
 }
 
 .flip-card-back {
   transform: rotateY(180deg);
+}
+
+[data-theme="retro"] .flip-card-back {
+  @apply bg-base-200;
+}
+
+[data-theme="coffee"] .flip-card-back {
+  @apply bg-[var(--dark-b-130)];
 }
 </style>
