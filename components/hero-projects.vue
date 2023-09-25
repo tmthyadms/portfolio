@@ -16,7 +16,7 @@
         <template #back>
           <p>
             Learn more:
-            <span
+            <span class="tooltip tooltip-bottom" :data-tip="project.url"
               ><a :href="project.url" class="link link-accent">{{
                 project.title
               }}</a></span
