@@ -10,8 +10,8 @@
           <p>
             <strong>{{ edu.program }}</strong>
           </p>
-          <p>
-            <em>{{ edu.school }}</em>
+          <p class="text-xs opacity-60">
+            {{ edu.school }}
           </p>
           <p>
             <span
@@ -19,7 +19,7 @@
               :data-tip="edu.resultType"
             >
               <SvgMortarboard /> </span
-            ><span class="align-middle">&nbsp;{{ edu.result }}</span>
+            ><span class="align-middle text-sm">&nbsp;{{ edu.result }}</span>
           </p>
         </div>
       </li>
@@ -33,10 +33,10 @@ export default {
     return {
       edus: [
         {
-          program: "Bachelor in Computer Science (Hons)",
+          program: "Bachelor in Computer Science (Hons.)",
           school: "Management and Science University",
           resultType: "CGPA",
-          result: "3.81",
+          result: "3.82",
         },
         {
           program: "Foundation in Computer Science",

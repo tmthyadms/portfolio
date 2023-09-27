@@ -3,7 +3,7 @@
     <div class="hero-content flex-col-reverse gap-6 lg:flex-row">
       <div class="max-w-lg text-center lg:text-left">
         <h1 id="introduce" class="text-5xl font-bold pb-6"></h1>
-        <p class="pb-6 text-lg">
+        <p class="mb-6 text-lg opacity-60">
           A final year Computer Science student pursuing a Bachelor's degree.
           Passionate about programming competitions, software development, and
           open-source projects.
@@ -23,8 +23,8 @@
         <a
           href="resume.pdf"
           type="application/pdf"
-          target="blank"
-          class="btn btn-primary btn-wide mb-2 lg:mr-2"
+          target="_blank"
+          class="btn btn-primary btn-wide mb-2 lg:mr-2 rounded-full"
         >
           View Resume
         </a>
