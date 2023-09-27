@@ -1,24 +1,33 @@
 <template>
-  <div class="card">
-    <figure v-if="imgSrc">
-      <img :src="imgSrc" :alt="title" />
-    </figure>
+  <div class="card glass max-w-sm">
     <div class="card-body">
       <h2 class="card-title">
-        {{ title }}
+        <span class="card-text">{{ title }}</span>
         <div v-if="badge" class="badge badge-primary">{{ badge }}</div>
+        <div v-if="info" class="ml-auto">
+          <span class="tooltip tooltip-left font-normal" :data-tip="info">
+            <SvgInfoCircle />
+          </span>
+        </div>
       </h2>
-      <p>{{ desc }}</p>
-      <div class="card-actions justify-end">
+      <p class="card-text text-xs text-start opacity-60">{{ desc }}</p>
+      <div class="card-actions justify-center">
         <div
           v-for="(badge, index) in badges"
           :key="index"
-          class="badge badge-outline badge-primary"
+          class="badge badge-sm badge-outline badge-primary"
         >
           {{ badge }}
         </div>
       </div>
     </div>
+    <figure v-if="imgSrc" class="card-figure">
+      <img
+        :src="imgSrc"
+        :alt="title"
+        class="rounded-[var(--rounded-box)] border border-base-content border-opacity-5 object-scale-down"
+      />
+    </figure>
   </div>
 </template>
 
@@ -36,6 +45,9 @@ export default {
     imgSrc: {
       type: String,
     },
+    info: {
+      type: String,
+    },
     badge: {
       type: String,
     },
@@ -46,3 +58,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.card-figure {
+  @apply px-[var(--padding-box,_2rem)] pb-[var(--padding-box,_2rem)];
+}
+
+[data-theme="coffee"] .card-text {
+  @apply text-neutral-content;
+}
+</style>
