@@ -9,8 +9,8 @@ module.exports = {
   ],
   theme: {
     data: {
-      themeLight: "retro",
-      themeDark: "coffee",
+      "theme-light": 'theme="retro"',
+      "theme-dark": 'theme="coffee"',
     },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
