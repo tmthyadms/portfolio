@@ -3,30 +3,66 @@
     class="navbar sticky top-0 z-30 justify-between bg-base-100 bg-opacity-90 backdrop-blur"
   >
     <div class="navbar-start">
+      <!-- Mobile navigation -->
       <div class="dropdown lg:hidden">
         <label tabindex="0" class="btn btn-secondary m-1"><SvgList /></label>
         <ul
           tabindex="0"
-          class="dropdown-content menu p-2 bg-secondary shadow rounded-box w-52 font-semibold"
+          class="dropdown-content menu p-2 bg-secondary text-secondary-content shadow rounded-box w-52"
         >
           <li v-for="(section, index) in sections" :key="index">
-            <a :href="section.href">{{ section.title }}</a>
+            <template v-if="section.title === 'Projects'">
+              <a
+                v-for="(project, index) in section.type"
+                :key="index"
+                :href="project.href"
+                class="font-semibold uppercase hover-secondary"
+                >{{ project.title }}</a
+              >
+            </template>
+            <a
+              v-else
+              :href="section.href"
+              class="font-semibold uppercase hover-secondary"
+              >{{ section.title }}</a
+            >
           </li>
         </ul>
       </div>
-      <a href="#" class="btn btn-ghost normal-case text-xl"
+      <a href="#" class="btn btn-ghost normal-case text-xl font-bold"
         >Timothy <span class="text-accent">Adams</span>
         <SvgPatchCheck fill="hsl(var(--in))" />
       </a>
     </div>
     <div class="navbar-center hidden lg:flex">
-      <a
-        v-for="(section, index) in sections"
-        :key="index"
-        :href="section.href"
-        class="btn btn-ghost"
-        >{{ section.title }}</a
-      >
+      <!-- Desktop navigation -->
+      <template v-for="(section, index) in sections">
+        <div
+          v-if="section.title === 'Projects'"
+          class="dropdown dropdown-hover"
+        >
+          <label tabindex="0" class="btn btn-ghost m-1 font-semibold">{{
+            section.title
+          }}</label>
+          <ul
+            tabindex="0"
+            class="dropdown-content dropdown-theme menu p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li v-for="(project, index) in section.type" :key="index">
+              <a :href="project.href" class="font-semibold uppercase">{{
+                project.title
+              }}</a>
+            </li>
+          </ul>
+        </div>
+        <a
+          v-else
+          :key="index"
+          :href="section.href"
+          class="btn btn-ghost font-semibold"
+          >{{ section.title }}</a
+        >
+      </template>
     </div>
     <div class="navbar-end">
       <div id="mode" class="tooltip tooltip-left" data-tip="">
@@ -66,7 +102,16 @@ export default {
         },
         {
           title: "Projects",
-          href: "#projects",
+          type: [
+            {
+              title: "Main Projects",
+              href: "#main-projects",
+            },
+            {
+              title: "Side Projects",
+              href: "#side-projects",
+            },
+          ],
         },
       ],
       swap: false,
@@ -95,3 +140,17 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.hover-secondary {
+  @apply hover:bg-secondary-focus hover:text-secondary-content;
+}
+
+[data-theme="retro"] .dropdown-theme {
+  @apply bg-base-200;
+}
+
+[data-theme="coffee"] .dropdown-theme {
+  @apply bg-[var(--dark-b-130)];
+}
+</style>
