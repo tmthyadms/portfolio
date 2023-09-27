@@ -15,7 +15,22 @@
         <a href="#experience" role="button" class="btn btn-xs btn-circle">1</a>
         <a href="#education" role="button" class="btn btn-xs btn-circle">2</a>
       </div>
-      <HeroProjects id="projects" />
+      <div class="carousel w-full">
+        <div id="past-projects" class="carousel-item w-full">
+          <HeroMainProjects />
+        </div>
+        <div id="side-projects" class="carousel-item w-full">
+          <HeroSideProjects />
+        </div>
+      </div>
+      <div class="flex justify-center gap-1">
+        <a href="#main-projects" role="button" class="btn btn-xs btn-circle"
+          >1</a
+        >
+        <a href="#side-projects" role="button" class="btn btn-xs btn-circle"
+          >2</a
+        >
+      </div>
     </main>
     <TheFooter />
   </div>
