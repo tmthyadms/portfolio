@@ -1,0 +1,15 @@
+:deep(.flip-card) {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+:deep(.flip-card-inner) {
+  @apply shadow-lg transition-colors duration-300 hover:bg-base-200;
+}
+
+:deep(.flip-card-front) {
+  @apply h-full;
+}
+
+:deep(.flip-card-back) {
+  @apply grid place-content-center p-[var(--padding-card,_2rem)] bg-base-200;
+}

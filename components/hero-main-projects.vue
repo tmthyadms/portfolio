@@ -58,7 +58,7 @@ export default {
           desc: "A mobile app for detecting dry eye syndrome.",
           imgSrc: "projects/eyebuddy.png",
           info: "Developed for Apps Innovation Challenge (AIC) 2022",
-          badges: ["Flutter", "Firebase", "Python"],
+          badges: ["Flutter", "Firebase", "Python", "OpenCV"],
           url: "https://shorturl.at/yHJR5",
           remarks: "Check out EyeBuddy on my LinkedIn's project.",
         },
@@ -69,15 +69,5 @@ export default {
 </script>
 
 <style scoped>
-:deep(.flip-card-inner) {
-  @apply shadow-lg;
-}
-
-:deep(.flip-card-front) {
-  @apply h-full;
-}
-
-:deep(.flip-card-back) {
-  @apply grid place-content-center p-[var(--rounded-box,_2rem)];
-}
+@import "@/assets/css/projects.css";
 </style>

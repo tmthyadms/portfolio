@@ -58,7 +58,13 @@ export default {
           title: "Sentinel",
           desc: "An AI-powered virtual assessment proctoring.",
           imgSrc: "projects/sentinel.png",
-          badges: ["PHP 8", "Bootstrap 5", "JavaScript", "MariaDB"],
+          badges: [
+            "PHP 8",
+            "Bootstrap 5",
+            "JavaScript",
+            "face-api.js",
+            "MariaDB",
+          ],
           url: "https://github.com/tmthyadms/sentinel",
         },
       ],
@@ -86,15 +92,5 @@ export default {
 </script>
 
 <style scoped>
-:deep(.flip-card-inner) {
-  @apply shadow-lg;
-}
-
-:deep(.flip-card-front) {
-  @apply h-full;
-}
-
-:deep(.flip-card-back) {
-  @apply grid place-content-center;
-}
+@import "@/assets/css/projects.css";
 </style>
