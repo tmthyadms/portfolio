@@ -8,9 +8,8 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
-    data: {
-      "theme-light": 'theme="retro"',
-      "theme-dark": 'theme="coffee"',
+    extend: {
+      colors: {},
     },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
