@@ -16,7 +16,7 @@
         <a href="#education" role="button" class="btn btn-xs btn-circle">2</a>
       </div>
       <div class="carousel w-full">
-        <div id="past-projects" class="carousel-item w-full">
+        <div id="main-projects" class="carousel-item w-full">
           <HeroMainProjects />
         </div>
         <div id="side-projects" class="carousel-item w-full">
