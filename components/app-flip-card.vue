@@ -63,6 +63,7 @@ export default {
 .flip-card-front,
 .flip-card-back {
   @apply rounded-[inherit];
+  transform: rotateX(0deg);
   backface-visibility: hidden;
 }
 
