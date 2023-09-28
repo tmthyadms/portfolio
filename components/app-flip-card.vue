@@ -76,12 +76,4 @@ export default {
   @apply absolute top-0 right-0 w-full h-full;
   transform: rotateY(180deg);
 }
-
-[data-theme="retro"] .flip-card-back {
-  @apply bg-base-200;
-}
-
-[data-theme="coffee"] .flip-card-back {
-  @apply bg-[var(--dark-b-130)];
-}
 </style>
