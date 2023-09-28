@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --dark-b-130: #191219;
-}
-
 html {
   @apply scroll-smooth;
 }
