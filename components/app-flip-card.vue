@@ -39,7 +39,6 @@ export default {
   methods: {
     flip() {
       const flipCard = document.getElementById(this.flipIDAttr);
-      console.log(flipCard);
       flipCard.classList.toggle("clicked");
     },
   },
