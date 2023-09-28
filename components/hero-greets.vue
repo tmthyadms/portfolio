@@ -21,12 +21,16 @@
           </div>
         </div>
         <a
+          role="button"
           href="resume.pdf"
           type="application/pdf"
           target="_blank"
-          class="btn btn-primary btn-wide mb-2 lg:mr-2 rounded-full"
+          class="btn btn-primary btn-wide group mb-2 lg:mr-2 rounded-full"
         >
           View Resume
+          <SvgBoxArrowInUpRight
+            class="transition-transform duration-300 group-hover:translate-x-1"
+          />
         </a>
         <span class="block lg:inline"
           >or download it
@@ -43,7 +47,7 @@
       </div>
       <div class="avatar">
         <div
-          class="w-64 rounded-full outline outline-4 outline-primary outline-offset-4"
+          class="w-64 rounded-full outline outline-4 outline-primary outline-double outline-offset-4"
         >
           <img
             src="profile-pic.jpg"
@@ -80,5 +84,9 @@ export default {
 <style scoped>
 [data-theme="coffee"] .bi {
   @apply fill-current;
+}
+
+.btn {
+  @apply transition-all duration-300;
 }
 </style>
