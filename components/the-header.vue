@@ -42,10 +42,7 @@
       <!-- Desktop navigation -->
       <template v-for="(section, index) in sections">
         <div v-if="section?.type" class="dropdown dropdown-hover group">
-          <label
-            role="button"
-            tabindex="0"
-            class="btn btn-ghost mb-1 font-semibold"
+          <label role="button" tabindex="0" class="btn btn-ghost font-semibold"
             >{{ section.title }}
             <SvgCaretDownFill
               class="transition-transform group-hover:rotate-180"
@@ -53,7 +50,7 @@
           </label>
           <ul
             tabindex="0"
-            class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-52"
+            class="dropdown-content menu mt-1 p-2 shadow bg-base-200 rounded-box w-52"
           >
             <li v-for="(project, index) in section.type" :key="index">
               <a :href="project.href" class="font-semibold uppercase">{{
