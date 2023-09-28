@@ -63,14 +63,13 @@ export default {
 .flip-card-front,
 .flip-card-back {
   @apply rounded-[inherit];
-  /* solution for flip card back issue */
+  transform: rotateX(0deg); /* fix for flip card back issue */
   /* ref: https://w3schools.invisionzone.com/topic/59131-flip-card-tutorial-not-working-in-firefox-safari/ */
-  transform: rotateX(0deg);
   backface-visibility: hidden;
 }
 
 .fip-card-front {
-  @apply relative;
+  @apply relative; /* allow flip card to match front card in size */
 }
 
 .flip-card-back {
