@@ -10,12 +10,12 @@
         </p>
         <div class="flex justify-center lg:justify-normal gap-4 mb-6">
           <div class="tooltip" data-tip="LinkedIn: @tmthyadms">
-            <a href="https://linkedin.com/in/tmthyadms">
+            <a href="https://linkedin.com/in/tmthyadms" target="_blank">
               <SvgLinkedin :width="32" fill="#0072b1" />
             </a>
           </div>
           <div class="tooltip" data-tip="GitHub: @tmthyadms">
-            <a href="https://github.com/tmthyadms">
+            <a href="https://github.com/tmthyadms" target="_blank">
               <SvgGithub :width="32" fill="#171515" />
             </a>
           </div>

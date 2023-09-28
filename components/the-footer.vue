@@ -4,8 +4,14 @@
     <div class="custom-footer py-10 bg-primary text-primary-content">
       <p class="text-sm font-semibold drop-shadow-sm">
         Built with 💖 by
-        <span class="tooltip" data-tip="https://github.com/tmthyadms">
-          <a href="https://github.com/tmthyadms" class="link">tmthyadms</a>
+        <span
+          class="tooltip"
+          data-tip="https://github.com/tmthyadms"
+          target="_blank"
+        >
+          <a href="https://github.com/tmthyadms" target="_blank" class="link"
+            >tmthyadms</a
+          >
         </span>
       </p>
     </div>
