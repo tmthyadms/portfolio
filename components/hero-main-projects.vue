@@ -2,31 +2,35 @@
   <AppHero title="Main Projects" desc="Learn more by clicking on a project.">
     <div class="flex flex-col lg:flex-row flex-wrap gap-x-6 gap-y-12">
       <AppFlipCard
-        v-for="(pastProject, index) in pastProjects"
+        v-for="(mainProject, index) in mainProjects"
         :key="index"
         :flipID="index"
-        flipName="pro-projects"
+        flipName="main-projects"
       >
         <template #front>
           <AppCard
-            :title="pastProject.title"
-            :desc="pastProject.desc"
-            :imgSrc="pastProject.imgSrc"
-            :info="pastProject.info"
-            :badge="pastProject.badge"
-            :badges="pastProject.badges"
+            :title="mainProject.title"
+            :desc="mainProject.desc"
+            :imgSrc="mainProject.imgSrc"
+            :info="mainProject.info"
+            :badge="mainProject.badge"
+            :badges="mainProject.badges"
             class="h-full"
           />
         </template>
         <template #back>
           <p>
-            Learn more:
-            <span class="tooltip tooltip-bottom" :data-tip="pastProject.url"
+            <span v-if="mainProject?.remarks">
+              {{ mainProject.remarks }}
+              <br /><br />
+            </span>
+            <span>Learn more:</span>
+            <span class="tooltip tooltip-bottom" :data-tip="mainProject.url"
               ><a
-                :href="pastProject.url"
+                :href="mainProject.url"
                 target="_blank"
                 class="link link-accent"
-                >{{ pastProject.title }}</a
+                >{{ mainProject?.urlTitle ?? mainProject.title }}</a
               ></span
             >
           </p>
@@ -40,7 +44,7 @@
 export default {
   data() {
     return {
-      pastProjects: [
+      mainProjects: [
         {
           title: "LockNRoll",
           desc: "A mobile app for controlling custom-built smart door lock remotely.",
@@ -55,7 +59,8 @@ export default {
           imgSrc: "projects/eyebuddy.png",
           info: "Developed for Apps Innovation Challenge (AIC) 2022",
           badges: ["Flutter", "Firebase", "Python"],
-          url: "#",
+          url: "https://shorturl.at/yHJR5",
+          remarks: "Check out EyeBuddy on my LinkedIn's project.",
         },
       ],
     };
@@ -64,14 +69,6 @@ export default {
 </script>
 
 <style scoped>
-:deep(.desc-icon) {
-  @apply rotate-180;
-}
-
-[data-theme="coffee"] .bi-hand-index-thumb {
-  @apply fill-[#ffde34];
-}
-
 :deep(.flip-card-inner) {
   @apply shadow-lg;
 }
@@ -81,6 +78,6 @@ export default {
 }
 
 :deep(.flip-card-back) {
-  @apply grid place-content-center;
+  @apply grid place-content-center p-[var(--rounded-box,_2rem)];
 }
 </style>

@@ -19,13 +19,17 @@
         </template>
         <template #back>
           <p>
-            Learn more:
+            <span v-if="sideProject?.remarks">
+              {{ sideProject.remarks }}
+              <br /><br />
+            </span>
+            <span>Learn more:</span>
             <span class="tooltip tooltip-bottom" :data-tip="sideProject.url"
               ><a
                 :href="sideProject.url"
                 target="_blank"
                 class="link link-accent"
-                >{{ sideProject.title }}</a
+                >{{ sideProject?.urlTitle ?? sideProject.title }}</a
               ></span
             >
           </p>
@@ -82,14 +86,6 @@ export default {
 </script>
 
 <style scoped>
-:deep(.desc-icon) {
-  @apply rotate-180;
-}
-
-:deep(.bi-hand-index-thumb) {
-  @apply fill-[#ffde34];
-}
-
 :deep(.flip-card-inner) {
   @apply shadow-lg;
 }
