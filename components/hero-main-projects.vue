@@ -5,7 +5,7 @@
         v-for="(mainProject, index) in mainProjects"
         :key="index"
         :flipID="index"
-        flipName="main-projects"
+        flip-name="main-projects"
       >
         <template #front>
           <AppCard
