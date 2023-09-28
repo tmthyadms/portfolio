@@ -44,7 +44,7 @@ export default {
         {
           title: "LockNRoll",
           desc: "A mobile app for controlling custom-built smart door lock remotely.",
-          imgSrc: "https://placehold.co/320x180",
+          imgSrc: "projects/locknroll.png",
           info: "Developed for Bachelor's final year project",
           badges: ["Flutter", "Firebase", "Arduino"],
           url: "https://github.com/tmthyadms/locknroll",
@@ -52,7 +52,7 @@ export default {
         {
           title: "EyeBuddy",
           desc: "A mobile app for detecting dry eye syndrome.",
-          imgSrc: "https://placehold.co/320x180",
+          imgSrc: "projects/eyebuddy.png",
           info: "Developed for Apps Innovation Challenge (AIC) 2022",
           badges: ["Flutter", "Firebase", "Python"],
           url: "#",
