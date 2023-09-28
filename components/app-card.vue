@@ -1,5 +1,5 @@
 <template>
-  <div class="card glass max-w-sm">
+  <div class="card glass max-w-sm md:max-w-md lg:max-w-md">
     <div class="card-body">
       <h2 class="card-title">
         <span class="card-text">{{ title }}</span>
