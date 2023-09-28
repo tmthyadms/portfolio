@@ -29,7 +29,10 @@
           </li>
         </ul>
       </div>
-      <a href="#" class="btn btn-ghost normal-case text-xl font-bold"
+      <a
+        href="#"
+        class="btn btn-ghost normal-case text-xl font-bold"
+        target="_blank"
         >Timothy <span class="text-accent">Adams</span>
         <SvgPatchCheck fill="hsl(var(--in))" />
       </a>
@@ -41,7 +44,7 @@
           v-if="section.title === 'Projects'"
           class="dropdown dropdown-hover"
         >
-          <label tabindex="0" class="btn btn-ghost m-1 font-semibold">{{
+          <label tabindex="0" class="btn btn-ghost mb-1 font-semibold">{{
             section.title
           }}</label>
           <ul
@@ -84,6 +87,8 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   data() {
     return {
@@ -131,11 +136,13 @@ export default {
     this.swap = isDark;
   },
   methods: {
+    ...mapMutations("theme", ["setIsDark"]),
     setTheme(flag) {
       document.body.parentNode.dataset.theme = flag ? this.dark : this.light;
       document.getElementById("mode").dataset.tip = flag
         ? "Dark mode"
         : "Light mode";
+      this.setIsDark(flag);
     },
   },
 };

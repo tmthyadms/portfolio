@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   data() {
     return {
@@ -51,12 +53,30 @@ export default {
         {
           title: "Sentinel",
           desc: "An AI-powered virtual assessment proctoring.",
-          imgSrc: "https://placehold.co/320x180",
+          imgSrc: "projects/sentinel.png",
           badges: ["PHP 8", "Bootstrap 5", "JavaScript", "MariaDB"],
           url: "https://github.com/tmthyadms/sentinel",
         },
       ],
     };
+  },
+  computed: {
+    ...mapGetters("theme", ["getIsDark"]),
+  },
+  watch: {
+    getIsDark(newVal) {
+      this.setPortfolioImgSrc(newVal);
+    },
+  },
+  mounted() {
+    this.setPortfolioImgSrc(this.getIsDark);
+  },
+  methods: {
+    setPortfolioImgSrc(flag) {
+      this.sideProjects[0].imgSrc = flag
+        ? "projects/portfolio-light.png"
+        : "projects/portfolio-dark.png";
+    },
   },
 };
 </script>
