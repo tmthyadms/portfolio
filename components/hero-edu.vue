@@ -4,7 +4,7 @@
       <li
         v-for="(edu, index) in edus"
         :key="index"
-        class="step step-primary !text-start"
+        class="step step-success !text-start"
       >
         <div>
           <p>
