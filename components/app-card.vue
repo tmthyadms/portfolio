@@ -61,7 +61,7 @@ export default {
 
 <style scoped>
 .card-figure {
-  @apply px-[var(--padding-box,_2rem)] pb-[var(--padding-box,_2rem)];
+  @apply px-[var(--padding-card,_2rem)] pb-[var(--padding-card,_2rem)];
 }
 
 [data-theme="coffee"] .card-text {
