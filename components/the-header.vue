@@ -122,8 +122,8 @@ export default {
         },
       ],
       swap: false,
-      light: "retro",
-      dark: "coffee",
+      light: "cupcake",
+      dark: "synthwave",
     };
   },
   watch: {
