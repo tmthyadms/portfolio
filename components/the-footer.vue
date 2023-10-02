@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="spacer spacer-footer"></div>
+    <div class="spacer spacer-art"></div>
     <div class="custom-footer py-10 bg-primary text-primary-content">
       <p class="text-sm font-semibold drop-shadow-sm">
         Built with 💖 by
@@ -19,15 +19,19 @@
 </template>
 
 <style scoped>
+.spacer {
+  @apply bg-cover aspect-[960/200];
+}
+
 .custom-footer {
   @apply grid place-content-center;
 }
 
-[data-theme="retro"] .spacer-footer {
-  @apply bg-[url('@/assets/svg/layered-waves-light.svg')];
+[data-theme="cupcake"] .spacer-art {
+  @apply bg-[url('@/assets/svg/footer-light.svg')];
 }
 
-[data-theme="coffee"] .spacer-footer {
-  @apply bg-[url('@/assets/svg/layered-waves-dark.svg')];
+[data-theme="synthwave"] .spacer-art {
+  @apply bg-[url('@/assets/svg/footer-dark.svg')];
 }
 </style>
