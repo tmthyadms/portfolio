@@ -1,5 +1,5 @@
 <template>
-  <div :id="flipIDAttr" class="flip-card" @click="flip">
+  <div :id="flipIDAttr" class="flip-card group" @click="flip">
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <slot name="front"></slot>

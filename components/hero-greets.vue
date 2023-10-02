@@ -52,7 +52,7 @@
           <img
             src="profile-pic.jpg"
             alt="Profile picture"
-            class="transition-transform duration-500 hover:scale-150"
+            class="transition-transform duration-500 ease-out hover:scale-150"
           />
         </div>
       </div>
