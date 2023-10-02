@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style scoped>
-[data-theme="coffee"] .bi {
+[data-theme="synthwave"] .bi {
   @apply fill-current;
 }
 
