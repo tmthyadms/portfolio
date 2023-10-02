@@ -1,9 +1,9 @@
 <template>
   <AppHero title="Experience">
     <div class="stack">
-      <template v-for="(exp, index) in exps">
-        <CardExp :key="index" :exp="exp" />
-      </template>
+      <div v-for="(exp, index) in exps" :key="index" class="rounded-box shadow">
+        <CardExp :exp="exp" />
+      </div>
     </div>
   </AppHero>
 </template>

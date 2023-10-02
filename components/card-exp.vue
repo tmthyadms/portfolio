@@ -1,43 +1,43 @@
 <template>
-  <div class="card">
-    <div class="card-body">
-      <div class="icon hidden lg:block">
-        <SvgBriefcase />
-      </div>
-      <h2 class="card-title flex-col lg:flex-row text-lg">
-        <span class="card-text">
-          <span class="icon inline-block lg:hidden align-middle">
-            <SvgBriefcase />
-          </span>
-          <span class="align-middle">{{ exp.role }} @</span>
-        </span>
-        <span class="tooltip tooltip-bottom" :data-tip="exp.companyUrl">
-          <a :href="exp.companyUrl" target="_blank" class="link link-accent">{{
-            exp.company
-          }}</a>
-        </span>
+  <div class="card group">
+    <div class="card-body justify-end overflow-hidden">
+      <h2 class="m-auto font-black text-4xl text-base-content/[0.25]">
+        Benefit Solutions<br class="inline lg:hidden" /><span
+          class="hidden lg:inline"
+          >&nbsp;</span
+        >Pte Ltd
       </h2>
-      <p class="card-text opacity-60">
-        <span class="align-middle">{{ exp.duration }}&nbsp;</span>
-        <!-- TODO: calculate duration -->
-        <span class="tooltip tooltip-right align-middle" data-tip="6 months">
-          <SvgInfoCircle />
-        </span>
-      </p>
-      <p class="card-text text-lg opacity-60">
-        <span v-if="exp?.desc">{{ exp.desc }}</span>
-        <template v-else>
-          <span class="italic">Updating soon</span>
-          <span class="loading loading-dots loading-sm align-bottom"></span>
-        </template>
-      </p>
-      <div class="card-actions justify-center">
-        <div
-          v-for="(skill, index) in exp.skills"
-          :key="index"
-          class="badge badge-lg badge-success font-semibold"
+      <div
+        class="space-y-2 translate-y-full group-hover:translate-y-0 transition duration-500 ease-out"
+      >
+        <h3
+          class="card-title -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"
         >
-          {{ skill }}
+          {{ exp.role }}
+          <SvgArrowRight
+            class="group-hover:animate-none group-hover:translate-x-1 group-hover:opacity-0 transition duration-300"
+          />
+        </h3>
+        <div
+          class="space-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out group-hover:ease-in"
+        >
+          <p class="text-xs text-start opacity-60">
+            <span v-if="exp?.desc">{{ exp.desc }}</span>
+            <template v-else>
+              <span>Updating soon</span>
+              <span class="loading loading-dots loading-xs align-bottom"></span>
+            </template>
+          </p>
+
+          <div class="card-actions justify-center">
+            <div
+              v-for="(skill, index) in exp.skills"
+              :key="index"
+              class="badge badge-sm badge-outline badge-success"
+            >
+              {{ skill }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -57,14 +57,14 @@ export default {
 
 <style scoped>
 .card {
-  @apply glass max-w-sm md:max-w-md lg:max-w-md min-h-[13rem] shadow;
+  @apply max-w-sm md:max-w-md lg:max-w-lg min-h-[24rem] !bg-base-100;
 }
 
-.icon {
-  @apply p-2 self-start bg-base-200 border border-base-content border-opacity-5 rounded-full;
+[data-theme="cupcake"] .card {
+  @apply border border-base-content border-opacity-5 shadow-inner;
 }
 
-[data-theme="coffee"] .card-text {
-  @apply text-neutral-content;
+[data-theme="synthwave"] .card {
+  @apply glass;
 }
 </style>
