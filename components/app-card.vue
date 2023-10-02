@@ -1,5 +1,5 @@
 <template>
-  <div class="card glass max-w-sm md:max-w-md lg:max-w-md">
+  <div class="card">
     <div class="card-body">
       <h2 class="card-title">
         <span class="card-text">{{ title }}</span>
@@ -22,11 +22,7 @@
       </div>
     </div>
     <figure v-if="imgSrc" class="card-figure">
-      <img
-        :src="imgSrc"
-        :alt="title"
-        class="rounded-[var(--rounded-box)] border border-base-content border-opacity-5 object-scale-down"
-      />
+      <img :src="imgSrc" :alt="title" class="img" />
     </figure>
   </div>
 </template>
@@ -60,11 +56,19 @@ export default {
 </script>
 
 <style scoped>
-.card-figure {
-  @apply px-[var(--padding-card,_2rem)] pb-[var(--padding-card,_2rem)];
+.card {
+  @apply glass max-w-sm md:max-w-md lg:max-w-md;
 }
 
 [data-theme="coffee"] .card-text {
   @apply text-neutral-content;
+}
+
+.card-figure {
+  @apply px-[var(--padding-card,_2rem)] pb-[var(--padding-card,_2rem)];
+}
+
+.img {
+  @apply rounded-[var(--rounded-box)] border border-base-content border-opacity-5 object-scale-down;
 }
 </style>
