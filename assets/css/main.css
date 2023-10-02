@@ -7,5 +7,5 @@ html {
 }
 
 .spacer {
-  @apply bg-cover aspect-[960/200];
+  @apply bg-cover aspect-[960/540];
 }

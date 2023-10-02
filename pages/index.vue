@@ -5,7 +5,11 @@
       <!-- Top section -->
       <HeroGreets id="about" />
       <!-- Mid section -->
-      <AppCarousel :items="midCarouselItems" :full-width="true" />
+      <AppCarousel
+        :items="midCarouselItems"
+        :full-width="true"
+        class="spacer spacer-art"
+      />
       <!-- Bot section -->
       <AppCarousel :items="botCarouselItems" :full-width="true" />
     </main>
@@ -41,3 +45,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+[data-theme="cupcake"] .spacer-art {
+  @apply bg-[url('@/assets/svg/mid-blob.svg')];
+}
+
+[data-theme="synthwave"] .spacer-art {
+  @apply bg-[url('@/assets/svg/mid-polygon-scatter.svg')];
+}
+</style>
