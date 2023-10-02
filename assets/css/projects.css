@@ -1,9 +1,9 @@
 :deep(.flip-card) {
-  @apply transition duration-300 ease-out hover:-translate-y-1;
+  @apply transition-transform duration-200 ease-out hover:-translate-y-1;
 }
 
 :deep(.flip-card-inner) {
-  @apply shadow transition duration-300 ease-out group-hover:bg-base-200 group-hover:shadow-lg;
+  @apply shadow transition-shadow duration-200 ease-out group-hover:shadow-lg;
 }
 
 :deep(.flip-card-front) {
@@ -11,5 +11,5 @@
 }
 
 :deep(.flip-card-back) {
-  @apply grid place-content-center p-[var(--padding-card,_2rem)] bg-base-200;
+  @apply grid place-content-center p-[var(--padding-card,_2rem)] bg-base-200 shadow-inner;
 }

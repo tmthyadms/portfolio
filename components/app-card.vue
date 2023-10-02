@@ -2,20 +2,22 @@
   <div class="card">
     <div class="card-body">
       <h2 class="card-title">
-        <span class="card-text">{{ title }}</span>
-        <div v-if="badge" class="badge badge-primary">{{ badge }}</div>
+        {{ title }}
+        <div v-if="badge" class="badge badge-primary">
+          {{ badge }}
+        </div>
         <div v-if="info" class="ml-auto">
           <span class="tooltip tooltip-left font-normal" :data-tip="info">
-            <SvgInfoCircle />
+            <SvgInfoCircleFill />
           </span>
         </div>
       </h2>
-      <p class="card-text text-xs text-start opacity-60">{{ desc }}</p>
+      <p class="text-xs text-start opacity-60">{{ desc }}</p>
       <div class="card-actions justify-center">
         <div
           v-for="(badge, index) in badges"
           :key="index"
-          class="badge badge-sm badge-outline badge-primary"
+          class="badge badge-sm badge-outline badge-success"
         >
           {{ badge }}
         </div>
@@ -57,11 +59,15 @@ export default {
 
 <style scoped>
 .card {
-  @apply glass max-w-sm md:max-w-md lg:max-w-md;
+  @apply max-w-sm md:max-w-md lg:max-w-md;
 }
 
-[data-theme="coffee"] .card-text {
-  @apply text-neutral-content;
+[data-theme="cupcake"] .card {
+  @apply border border-base-content border-opacity-5 shadow-inner;
+}
+
+[data-theme="synthwave"] .card {
+  @apply glass;
 }
 
 .card-figure {
@@ -69,6 +75,6 @@ export default {
 }
 
 .img {
-  @apply rounded-[var(--rounded-box)] border border-base-content border-opacity-5 object-scale-down;
+  @apply rounded-box border border-base-content border-opacity-5 object-scale-down;
 }
 </style>

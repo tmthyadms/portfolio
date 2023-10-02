@@ -47,8 +47,16 @@ export default {
 
 <style scoped>
 .flip-card {
-  @apply card;
+  @apply rounded-box;
   perspective: 1000px;
+}
+
+[data-theme="cupcake"] .flip-card:hover .flip-card-inner {
+  @apply bg-base-200;
+}
+
+[data-theme="synthwave"] .flip-card:hover .flip-card-inner {
+  @apply bg-neutral;
 }
 
 .flip-card .flip-card-inner {
