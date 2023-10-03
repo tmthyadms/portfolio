@@ -26,7 +26,7 @@
     <figure v-if="imgSrc" class="card-figure">
       <!-- Fallback image -->
       <div
-        class="w-full h-32 md:h-52 bg-neutral-focus rounded-box"
+        class="flex-1 md:w-96 h-32 md:h-52 bg-neutral-focus rounded-box"
         :class="hasLoaded ? 'hidden' : 'block'"
       ></div>
       <img
