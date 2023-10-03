@@ -49,7 +49,7 @@ export default {
         {
           title: "Portfolio",
           desc: "My digital portfolio.",
-          imgSrc: "https://placehold.co/320x180",
+          imgSrc: "projects/portfolio-light.png",
           badge: "NEW",
           badges: ["Nuxt 2", "Vue 2", "Tailwind CSS", "daisyUI"],
           url: "https://github.com/tmthyadms/portfolio",
