@@ -7,25 +7,20 @@
             <li
               v-for="(edu, index) in edus"
               :key="index"
-              class="step step-success !text-start"
+              class="step step-primary !text-start"
             >
               <div>
                 <p>
                   <strong>{{ edu.program }}</strong>
                 </p>
-                <p class="text-xs opacity-60">
+                <p class="mb-2 text-xs opacity-60">
                   {{ edu.school }}
                 </p>
-                <p>
-                  <span
-                    class="tooltip tooltip-bottom align-middle"
-                    :data-tip="edu.resultType"
-                  >
-                    <SvgMortarboard /> </span
-                  ><span class="align-middle text-sm"
-                    >&nbsp;{{ edu.result }}</span
-                  >
-                </p>
+                <div class="tooltip tooltip-bottom" :data-tip="edu.resultType">
+                  <div class="badge badge-sm badge-outline badge-success">
+                    {{ edu.result }}
+                  </div>
+                </div>
               </div>
             </li>
           </ul>
