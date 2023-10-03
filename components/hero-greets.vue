@@ -45,17 +45,7 @@
           >
         </span>
       </div>
-      <div class="avatar">
-        <div
-          class="w-64 rounded-full outline outline-4 outline-primary outline-double outline-offset-4"
-        >
-          <img
-            src="profile-pic.jpg"
-            alt="Profile picture"
-            class="transition-transform duration-500 ease-out hover:scale-150"
-          />
-        </div>
-      </div>
+      <AppAvatar />
     </div>
   </div>
 </template>
@@ -68,7 +58,6 @@ export default {
     let typewriter = new Typewriter("#introduce", {
       loop: true,
     });
-
     typewriter
       .pauseFor(700)
       .typeString("Hi, I'm Timothy!")
