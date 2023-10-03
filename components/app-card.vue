@@ -24,7 +24,18 @@
       </div>
     </div>
     <figure v-if="imgSrc" class="card-figure">
-      <img :src="imgSrc" :alt="title" class="img" />
+      <!-- Fallback image -->
+      <div
+        class="w-full h-32 md:h-52 bg-neutral-focus rounded-box"
+        :class="hasLoaded ? 'hidden' : 'block'"
+      ></div>
+      <img
+        :src="imgSrc"
+        :alt="title"
+        class="img"
+        :class="hasLoaded ? 'block' : 'hidden'"
+        @load="hasLoaded = true"
+      />
     </figure>
   </div>
 </template>
@@ -54,12 +65,17 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      hasLoaded: false,
+    };
+  },
 };
 </script>
 
 <style scoped>
 .card {
-  @apply max-w-sm md:max-w-md lg:max-w-md;
+  @apply max-w-sm md:max-w-md;
 }
 
 [data-theme="cupcake"] .card {
