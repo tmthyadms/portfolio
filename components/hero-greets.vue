@@ -25,7 +25,7 @@
           href="resume.pdf"
           type="application/pdf"
           target="_blank"
-          class="btn btn-primary btn-wide group mb-2 lg:mr-2 rounded-full"
+          class="btn btn-primary btn-wide group mb-2 lg:mr-2"
         >
           View Resume
           <SvgBoxArrowInUpRight
