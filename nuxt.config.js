@@ -20,7 +20,9 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/assets/css/main.css" /* "@/assets/css/patterns.css" */],
+  css: [
+    /* "@/assets/css/patterns.css" */
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtj/s.dev/config-plugins
   plugins: [],
@@ -49,19 +51,24 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
-      },
-    },
-  },
+  build: {},
 
   server: {
     port: 5000,
+  },
+
+  tailwindcss: {
+    config: {
+      theme: {
+        extend: {
+          colors: {},
+        },
+      },
+      plugins: [require("@tailwindcss/typography"), require("daisyui")],
+      daisyui: {
+        themes: ["cupcake", "synthwave", "aqua"],
+      },
+    },
   },
 
   target: "static",

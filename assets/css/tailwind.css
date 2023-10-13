@@ -6,6 +6,10 @@ html {
   @apply scroll-smooth;
 }
 
+.app-flex {
+  @apply flex flex-col lg:flex-row flex-wrap gap-x-6 gap-y-6 lg:gap-y-12;
+}
+
 .spacer {
   @apply bg-cover aspect-[960/540];
 }
