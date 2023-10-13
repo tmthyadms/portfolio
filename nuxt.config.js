@@ -12,7 +12,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Discover the world of Timothy Adams through his portfolio website. Gain insights into Timothy's background, professional experience, educational journey, and a stunning array of creative projects. Elevate your digital presence with Timothy Adams today.",
+          "Get to know Timothy Adams' professionally. From experience to projects, find it all here.",
       },
       { name: "format-detection", content: "telephone=no" },
     ],
