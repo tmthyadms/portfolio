@@ -30,7 +30,7 @@ export default {
   },
   computed: {
     fallbackHeight() {
-      return this.height ? this.height : this.width;
+      return this.height || this.width;
     },
   },
 };

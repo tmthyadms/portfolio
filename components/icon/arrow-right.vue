@@ -4,16 +4,12 @@
     :width="width"
     :height="fallbackHeight"
     :fill="fill"
-    class="bi bi-box-arrow-in-up-right"
+    class="bi bi-arrow-right"
     viewBox="0 0 16 16"
   >
     <path
       fill-rule="evenodd"
-      d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5z"
-    />
-    <path
-      fill-rule="evenodd"
-      d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0v-5z"
+      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
     />
   </svg>
 </template>
@@ -35,7 +31,7 @@ export default {
   },
   computed: {
     fallbackHeight() {
-      return this.height ? this.height : this.width;
+      return this.height || this.width;
     },
   },
 };
