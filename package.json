@@ -21,10 +21,9 @@
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@nuxtjs/tailwindcss": "^5.3.3",
     "@tailwindcss/typography": "^0.5.10",
-    "autoprefixer": "^10.4.15",
-    "daisyui": "^3.7.6",
+    "daisyui": "^3.9.2",
     "postcss": "^8.4.17"
   }
 }
