@@ -84,4 +84,12 @@ export default {
   @apply absolute top-0 right-0 w-full h-full;
   transform: rotateY(180deg);
 }
+
+[data-theme="cupcake"] .flip-card-back {
+  @apply bg-base-200;
+}
+
+[data-theme="synthwave"] .flip-card-back {
+  @apply bg-neutral;
+}
 </style>
