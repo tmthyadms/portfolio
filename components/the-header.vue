@@ -9,7 +9,10 @@
         <label role="button" tabindex="0" class="btn btn-sm btn-ghost mb-1"
           ><IconList :width="20"
         /></label>
-        <ul tabindex="0" class="dropdown-content menu menu-design p-2 w-52">
+        <ul
+          tabindex="0"
+          class="dropdown-content menu menu-design app-border p-2 w-52"
+        >
           <li v-for="(section, index) in sections" :key="index">
             <template v-if="section?.type">
               <a
@@ -168,6 +171,6 @@ export default {
 
 <style scoped>
 .menu-design {
-  @apply bg-base-100 app-border rounded-box shadow-inner;
+  @apply bg-base-100 rounded-box shadow-inner;
 }
 </style>

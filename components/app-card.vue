@@ -40,7 +40,7 @@
       <img
         :src="imgSrc"
         :alt="title"
-        class="img"
+        class="img app-border"
         :class="hasLoaded ? 'block' : 'hidden'"
         @load="hasLoaded = true"
       />
@@ -96,6 +96,6 @@ export default {
 }
 
 .img {
-  @apply bg-base-300 app-border rounded-box object-scale-down;
+  @apply bg-base-300 rounded-box object-scale-down;
 }
 </style>
