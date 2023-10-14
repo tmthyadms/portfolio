@@ -16,15 +16,15 @@
             v-if="index > 0"
             role="button"
             :href="`#${items[index - 1].id}`"
-            class="btn btn-circle mr-auto"
-            ><SvgCaretLeftFill
+            class="btn btn-ghost btn-circle mr-auto transition-transform duration-300 ease-out hover:-translate-x-1"
+            ><IconCaretLeftFill
           /></a>
           <a
             v-if="index < items.length - 1"
             role="button"
             :href="`#${items[index + 1].id}`"
-            class="btn btn-circle ml-auto"
-            ><SvgCaretRightFill
+            class="btn btn-ghost btn-circle ml-auto transition-transform duration-300 ease-out hover:translate-x-1"
+            ><IconCaretRightFill
           /></a>
         </div>
         <component :is="item.component" />
@@ -37,7 +37,7 @@
         :key="index"
         role="button"
         :href="`#${item.id}`"
-        class="btn btn-xs btn-circle"
+        class="btn btn-xs btn-theme btn-circle"
         >{{ index + 1 }}</a
       >
     </div>
@@ -58,3 +58,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+[data-theme="synthwave"] .btn-theme {
+  @apply btn-neutral;
+}
+</style>
