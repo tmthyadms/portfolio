@@ -1,8 +1,6 @@
 <template>
   <AppHero
-    desc="A final year Computer Science student pursuing a Bachelor's degree.
-          Passionate about programming competitions, software development, and
-          open-source projects."
+    desc="A final year Computer Science student with expertize in web development using <em>Vue.js</em>, <em>Tailwind CSS</em>, and <em>Bootstrap</em> as well as mobile development using <em>Flutter</em>."
     :center="false"
   >
     <template #figure>
