@@ -1,6 +1,6 @@
 <template>
   <AppHero title="Side Projects" desc="Learn more by clicking on a project.">
-    <div class="flex flex-col lg:flex-row flex-wrap gap-x-6 gap-y-12">
+    <div class="app-flex">
       <AppFlipCard
         v-for="(sideProject, index) in sideProjects"
         :key="index"
@@ -14,6 +14,7 @@
             :imgSrc="sideProject.imgSrc"
             :badge="sideProject.badge"
             :badges="sideProject.badges"
+            :theme="false"
             class="h-full"
           />
         </template>
@@ -28,7 +29,7 @@
               ><a
                 :href="sideProject.url"
                 target="_blank"
-                class="link link-accent"
+                class="link link-accent link-hover"
                 >{{ sideProject?.urlTitle ?? sideProject.title }}</a
               ></span
             >
@@ -71,15 +72,15 @@ export default {
     };
   },
   computed: {
-    ...mapGetters("theme", ["getIsDark"]),
+    ...mapGetters("theme", ["getIsDarkMode"]),
   },
   watch: {
-    getIsDark(newVal) {
+    getIsDarkMode(newVal) {
       this.setPortfolioImgSrc(newVal);
     },
   },
   mounted() {
-    this.setPortfolioImgSrc(this.getIsDark);
+    this.setPortfolioImgSrc(this.getIsDarkMode);
   },
   methods: {
     setPortfolioImgSrc(flag) {

@@ -1,6 +1,6 @@
 <template>
   <AppHero title="Main Projects" desc="Learn more by clicking on a project.">
-    <div class="flex flex-col lg:flex-row flex-wrap gap-x-6 gap-y-12">
+    <div class="app-flex">
       <AppFlipCard
         v-for="(mainProject, index) in mainProjects"
         :key="index"
@@ -15,6 +15,7 @@
             :info="mainProject.info"
             :badge="mainProject.badge"
             :badges="mainProject.badges"
+            :theme="false"
             class="h-full"
           />
         </template>
@@ -29,7 +30,7 @@
               ><a
                 :href="mainProject.url"
                 target="_blank"
-                class="link link-accent"
+                class="link link-accent link-hover"
                 >{{ mainProject?.urlTitle ?? mainProject.title }}</a
               ></span
             >
