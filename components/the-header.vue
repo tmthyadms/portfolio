@@ -1,29 +1,33 @@
 <template>
   <header
-    class="navbar sticky top-0 z-30 justify-between bg-base-100 bg-opacity-90 backdrop-blur"
+    id="header"
+    class="navbar sticky top-0 z-30 px-4 justify-between bg-base-100 bg-opacity-90 backdrop-blur"
+    @scroll="shadowOnScroll"
   >
     <div class="navbar-start">
       <!-- Mobile navigation -->
-      <div class="dropdown lg:hidden">
-        <label role="button" tabindex="0" class="btn m-1"><SvgList /></label>
+      <div class="dropdown lg:hidden mr-2">
+        <label role="button" tabindex="0" class="btn btn-sm btn-ghost mb-1"
+          ><IconList :width="20"
+        /></label>
         <ul
           tabindex="0"
-          class="dropdown-content menu p-2 bg-base-200 shadow rounded-box w-52"
+          class="dropdown-content menu p-2 bg-base-100 border border-base-content border-opacity-5 rounded-box shadow-inner w-52"
         >
           <li v-for="(section, index) in sections" :key="index">
             <template v-if="section?.type">
               <a
-                v-for="(project, index) in section.type"
+                v-for="(subsection, index) in section.type"
                 :key="index"
-                :href="project.href"
-                class="font-semibold uppercase hover-secondary"
-                >{{ project.title }}</a
+                :href="subsection.href"
+                class="text-xs md:text-sm font-semibold uppercase"
+                >{{ subsection.title }}</a
               >
             </template>
             <a
               v-else
               :href="section.href"
-              class="font-semibold uppercase hover-secondary"
+              class="text-xs md:text-sm font-semibold uppercase"
               >{{ section.title }}</a
             >
           </li>
@@ -32,10 +36,9 @@
       <a
         role="button"
         href="#"
-        class="btn btn-ghost normal-case text-xl font-bold"
-        target="_blank"
-        >Timothy <span class="text-accent">Adams</span>
-        <SvgPatchCheck fill="hsl(var(--in))" />
+        class="flex items-center text-lg md:text-xl font-bold normal-case"
+        >Timothy&nbsp;<span class="text-accent">Adams&nbsp;</span>
+        <IconPatchCheck fill="hsl(var(--in))" />
       </a>
     </div>
     <div class="navbar-center hidden lg:flex">
@@ -44,17 +47,15 @@
         <div v-if="section?.type" class="dropdown dropdown-hover group">
           <label role="button" tabindex="0" class="btn btn-ghost font-semibold"
             >{{ section.title }}
-            <SvgCaretDownFill
-              class="transition-transform group-hover:rotate-180"
-            />
+            <IconCaretDownFill />
           </label>
           <ul
             tabindex="0"
-            class="dropdown-content menu mt-1 p-2 shadow bg-base-200 rounded-box w-52"
+            class="dropdown-content menu p-2 bg-base-100 border border-base-content border-opacity-5 shadow-inner rounded-box w-52"
           >
-            <li v-for="(project, index) in section.type" :key="index">
-              <a :href="project.href" class="font-semibold uppercase">{{
-                project.title
+            <li v-for="(subsection, index) in section.type" :key="index">
+              <a :href="subsection.href" class="font-semibold uppercase">{{
+                subsection.title
               }}</a>
             </li>
           </ul>
@@ -70,17 +71,21 @@
       </template>
     </div>
     <div class="navbar-end">
-      <div id="mode" class="tooltip tooltip-left" data-tip="">
+      <div
+        id="tip-theme"
+        class="tooltip tooltip-left"
+        :data-tip="theme.light.tip"
+      >
         <label
           role="button"
-          class="btn btn-sm btn-circle swap swap-rotate mr-4"
+          class="btn btn-sm btn-ghost btn-circle swap swap-rotate"
         >
-          <input type="checkbox" v-model="swap" />
+          <input type="checkbox" v-model="theme.isDarkMode" />
           <div class="swap-off">
-            <SvgEmojiSunglasses />
+            <IconEmojiSunglasses :width="20" />
           </div>
           <div class="swap-on">
-            <SvgMoonStars />
+            <IconMoonStars :width="20" />
           </div>
         </label>
       </div>
@@ -121,37 +126,47 @@ export default {
           ],
         },
       ],
-      swap: false,
-      light: "cupcake",
-      dark: "synthwave",
+      theme: {
+        light: {
+          current: "cupcake",
+          tip: "Switch to dark mode",
+        },
+        dark: {
+          current: "synthwave",
+          tip: "Switch to light mode",
+        },
+        isDarkMode: false,
+      },
     };
   },
   watch: {
-    swap(newVal) {
-      this.setTheme(newVal);
-      localStorage.setItem("isDark", newVal);
+    "theme.isDarkMode"(newFlag) {
+      this.setTheme(newFlag);
     },
   },
   mounted() {
-    const isDark = JSON.parse(localStorage.getItem("isDark"));
-    this.setTheme(isDark);
-    this.swap = isDark;
+    const userPref = JSON.parse(localStorage.getItem("isDarkMode"));
+    this.theme.isDarkMode = userPref ?? this.theme.isDarkMode;
+    this.setTheme(this.theme.isDarkMode);
   },
   methods: {
-    ...mapMutations("theme", ["setIsDark"]),
-    setTheme(flag) {
-      document.body.parentNode.dataset.theme = flag ? this.dark : this.light;
-      document.getElementById("mode").dataset.tip = flag
-        ? "Dark mode"
-        : "Light mode";
-      this.setIsDark(flag);
+    ...mapMutations("theme", ["setIsDarkMode"]),
+    setTheme(isDarkMode) {
+      document.body.parentNode.dataset.theme = isDarkMode
+        ? this.theme.dark.current
+        : this.theme.light.current;
+      document.getElementById("tip-theme").dataset.tip = isDarkMode
+        ? this.theme.dark.tip
+        : this.theme.light.tip;
+      localStorage.setItem("isDarkMode", isDarkMode);
+      this.setIsDarkMode(isDarkMode);
+    },
+    shadowOnScroll(event) {
+      console.log("event:", event);
+      if (window.scrollY > 0)
+        document.getElementById("header").classList.add("shadow");
+      else document.querySelector("header").classList.remove("shadow");
     },
   },
 };
 </script>
-
-<style scoped>
-.hover-secondary {
-  @apply hover:bg-secondary-focus hover:text-secondary-content;
-}
-</style>
