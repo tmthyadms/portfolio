@@ -14,7 +14,11 @@
     </template>
     <template>
       <div class="flex justify-center lg:justify-normal mb-6">
-        <div v-for="social in socials" class="tooltip" :data-tip="social.tip">
+        <div
+          v-for="social in socials"
+          class="tooltip tooltip-info"
+          :data-tip="social.tip"
+        >
           <a
             role="button"
             :href="social.href"
@@ -39,7 +43,10 @@
       </a>
       <span class="block lg:inline text-xs md:text-base"
         >or download it
-        <span class="tooltip tooltip-bottom" data-tip="timothy-resume.pdf">
+        <span
+          class="tooltip tooltip-info tooltip-bottom"
+          data-tip="timothy-resume.pdf"
+        >
           <a
             href="resume.pdf"
             type="application/pdf"

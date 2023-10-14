@@ -66,7 +66,7 @@
     <div class="navbar-end">
       <div
         id="tip-theme"
-        class="tooltip tooltip-left"
+        class="tooltip tooltip-info tooltip-left"
         :data-tip="theme.light.tip"
       >
         <label

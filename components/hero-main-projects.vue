@@ -26,7 +26,9 @@
               <br /><br />
             </span>
             <span>Learn more:</span>
-            <span class="tooltip tooltip-bottom" :data-tip="mainProject.url"
+            <span
+              class="tooltip tooltip-info tooltip-bottom"
+              :data-tip="mainProject.url"
               ><a
                 :href="mainProject.url"
                 target="_blank"

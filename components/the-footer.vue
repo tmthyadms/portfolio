@@ -5,7 +5,7 @@
       <p class="text-sm font-semibold drop-shadow-sm">
         Built with 💖 by
         <span
-          class="tooltip"
+          class="tooltip tooltip-info"
           data-tip="https://github.com/tmthyadms"
           target="_blank"
         >

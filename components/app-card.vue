@@ -8,7 +8,10 @@
             {{ badge }}
           </div>
           <div v-if="info" class="hidden lg:block ml-auto">
-            <span class="tooltip tooltip-left font-normal" :data-tip="info">
+            <span
+              class="tooltip tooltip-info tooltip-left font-normal"
+              :data-tip="info"
+            >
               <IconInfoCircleFill />
             </span>
           </div>
