@@ -10,10 +10,7 @@
         <label role="button" tabindex="0" class="btn btn-sm btn-ghost mb-1"
           ><IconList :width="20"
         /></label>
-        <ul
-          tabindex="0"
-          class="dropdown-content menu p-2 bg-base-100 border border-base-content border-opacity-5 rounded-box shadow-inner w-52"
-        >
+        <ul tabindex="0" class="dropdown-content menu menu-design p-2 w-52">
           <li v-for="(section, index) in sections" :key="index">
             <template v-if="section?.type">
               <a
@@ -49,10 +46,7 @@
             >{{ section.title }}
             <IconCaretDownFill />
           </label>
-          <ul
-            tabindex="0"
-            class="dropdown-content menu p-2 bg-base-100 border border-base-content border-opacity-5 shadow-inner rounded-box w-52"
-          >
+          <ul tabindex="0" class="dropdown-content menu menu-design p-2 w-52">
             <li v-for="(subsection, index) in section.type" :key="index">
               <a :href="subsection.href" class="font-semibold uppercase">{{
                 subsection.title
@@ -170,3 +164,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.menu-design {
+  @apply bg-base-100 border border-base-content border-opacity-5 rounded-box shadow-inner;
+}
+</style>
