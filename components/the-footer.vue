@@ -9,7 +9,10 @@
           data-tip="https://github.com/tmthyadms"
           target="_blank"
         >
-          <a href="https://github.com/tmthyadms" target="_blank" class="link"
+          <a
+            href="https://github.com/tmthyadms"
+            target="_blank"
+            class="link hover:no-underline"
             >tmthyadms</a
           >
         </span>
