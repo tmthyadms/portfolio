@@ -3,7 +3,7 @@
     <TheHeader />
     <main class="flex-1">
       <!-- Top section -->
-      <HeroGreets id="about" />
+      <HeroAbout id="about" />
       <!-- Mid section -->
       <AppCarousel
         :items="midCarouselItems"
