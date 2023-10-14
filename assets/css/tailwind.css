@@ -2,14 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .app-flex {
+    @apply flex flex-col lg:flex-row flex-wrap gap-x-6 gap-y-6 lg:gap-y-12;
+  }
+
+  .app-border {
+    @apply border border-base-content border-opacity-5;
+  }
+
+  .spacer {
+    @apply bg-cover aspect-[960/540];
+  }
+}
+
 html {
   @apply scroll-smooth;
-}
-
-.app-flex {
-  @apply flex flex-col lg:flex-row flex-wrap gap-x-6 gap-y-6 lg:gap-y-12;
-}
-
-.spacer {
-  @apply bg-cover aspect-[960/540];
 }
