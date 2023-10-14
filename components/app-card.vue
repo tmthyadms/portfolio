@@ -96,6 +96,6 @@ export default {
 }
 
 .img {
-  @apply bg-base-300 border border-base-content border-opacity-5 rounded-box object-scale-down;
+  @apply bg-base-300 app-border rounded-box object-scale-down;
 }
 </style>

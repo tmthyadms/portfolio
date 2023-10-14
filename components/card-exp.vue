@@ -1,7 +1,5 @@
 <template>
-  <AppCard
-    class="group min-h-[24rem] border border-base-content border-opacity-5 shadow-inner overflow-hidden"
-  >
+  <AppCard class="group min-h-[24rem] app-border shadow-inner overflow-hidden">
     <h2 class="m-auto font-black text-3xl lg:text-4xl text-base-content/[0.25]">
       Benefit Solutions<br class="inline" /><span class="hidden lg:inline"
         >&nbsp;</span

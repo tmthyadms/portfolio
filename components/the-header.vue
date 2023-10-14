@@ -168,6 +168,6 @@ export default {
 
 <style scoped>
 .menu-design {
-  @apply bg-base-100 border border-base-content border-opacity-5 rounded-box shadow-inner;
+  @apply bg-base-100 app-border rounded-box shadow-inner;
 }
 </style>
