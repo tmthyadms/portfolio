@@ -1,14 +1,14 @@
 export const state = () => ({
-  isDark: false,
+  isDarkMode: false,
 });
 
 export const getters = {
-  getIsDark: (state) => state.isDark,
+  getIsDarkMode: (state) => state.isDarkMode,
 };
 
 export const mutations = {
-  setIsDark(state, payload) {
-    state.isDark = payload;
+  setIsDarkMode(state, payload) {
+    state.isDarkMode = payload;
   },
 };
 
