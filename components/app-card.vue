@@ -1,32 +1,37 @@
 <template>
-  <div class="card">
+  <div class="card max-w-sm md:max-w-md" :class="{ 'card-theme': theme }">
     <div class="card-body">
-      <h2 class="card-title">
-        {{ title }}
-        <div v-if="badge" class="badge badge-primary">
-          {{ badge }}
+      <slot>
+        <h2 class="card-title">
+          {{ title }}
+          <div v-if="badge" class="badge badge-primary">
+            {{ badge }}
+          </div>
+          <div v-if="info" class="hidden lg:block ml-auto">
+            <span class="tooltip tooltip-left font-normal" :data-tip="info">
+              <IconInfoCircleFill />
+            </span>
+          </div>
+        </h2>
+        <p v-if="info" class="lg:hidden text-xs text-start opacity-60">
+          <em>* {{ info }}</em>
+        </p>
+        <p class="text-xs text-start opacity-60">{{ desc }}</p>
+        <div class="card-actions justify-center">
+          <div
+            v-for="(badge, index) in badges"
+            :key="index"
+            class="badge badge-sm badge-outline badge-success"
+          >
+            {{ badge }}
+          </div>
         </div>
-        <div v-if="info" class="ml-auto">
-          <span class="tooltip tooltip-left font-normal" :data-tip="info">
-            <SvgInfoCircleFill />
-          </span>
-        </div>
-      </h2>
-      <p class="text-xs text-start opacity-60">{{ desc }}</p>
-      <div class="card-actions justify-center">
-        <div
-          v-for="(badge, index) in badges"
-          :key="index"
-          class="badge badge-sm badge-outline badge-success"
-        >
-          {{ badge }}
-        </div>
-      </div>
+      </slot>
     </div>
     <figure v-if="imgSrc" class="card-figure">
       <!-- Fallback image -->
       <div
-        class="flex-1 md:w-96 h-32 md:h-52 bg-neutral-focus rounded-box"
+        class="flex-1 bg-neutral-focus rounded-box"
         :class="hasLoaded ? 'hidden' : 'block'"
       ></div>
       <img
@@ -45,11 +50,9 @@ export default {
   props: {
     title: {
       type: String,
-      required: true,
     },
     desc: {
       type: String,
-      required: true,
     },
     imgSrc: {
       type: String,
@@ -62,7 +65,10 @@ export default {
     },
     badges: {
       type: Array,
-      required: true,
+    },
+    theme: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {
@@ -74,16 +80,12 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  @apply max-w-sm md:max-w-md;
+[data-theme="cupcake"] .card-theme {
+  @apply bg-base-200 text-base-content;
 }
 
-[data-theme="cupcake"] .card {
-  @apply border border-base-content border-opacity-5 shadow-inner;
-}
-
-[data-theme="synthwave"] .card {
-  @apply glass;
+[data-theme="synthwave"] .card-theme {
+  @apply bg-neutral text-neutral-content;
 }
 
 .card-figure {
@@ -91,6 +93,6 @@ export default {
 }
 
 .img {
-  @apply rounded-box border border-base-content border-opacity-5 object-scale-down;
+  @apply bg-base-300 border border-base-content border-opacity-5 rounded-box object-scale-down;
 }
 </style>
