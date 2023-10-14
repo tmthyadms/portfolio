@@ -1,8 +1,7 @@
 <template>
   <header
     id="header"
-    class="navbar sticky top-0 z-30 px-4 justify-between bg-base-100 bg-opacity-90 backdrop-blur"
-    @scroll="shadowOnScroll"
+    class="navbar sticky top-0 z-30 px-4 justify-between bg-base-100 bg-opacity-90 backdrop-blur transition-shadow duration-300"
   >
     <div class="navbar-start">
       <!-- Mobile navigation -->
@@ -142,6 +141,7 @@ export default {
     const userPref = JSON.parse(localStorage.getItem("isDarkMode"));
     this.theme.isDarkMode = userPref ?? this.theme.isDarkMode;
     this.setTheme(this.theme.isDarkMode);
+    this.shadowOnScroll();
   },
   methods: {
     ...mapMutations("theme", ["setIsDarkMode"]),
@@ -155,11 +155,12 @@ export default {
       localStorage.setItem("isDarkMode", isDarkMode);
       this.setIsDarkMode(isDarkMode);
     },
-    shadowOnScroll(event) {
-      console.log("event:", event);
-      if (window.scrollY > 0)
-        document.getElementById("header").classList.add("shadow");
-      else document.querySelector("header").classList.remove("shadow");
+    shadowOnScroll() {
+      document.body.onscroll = () => {
+        const header = document.getElementById("header");
+        if (window.scrollY > 0) header.classList.add("shadow", "ease-out");
+        else header.classList.remove("shadow", "ease-in");
+      };
     },
   },
 };
