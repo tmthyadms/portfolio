@@ -50,7 +50,7 @@
           </label>
           <ul tabindex="0" class="dropdown-content menu menu-design p-2 w-52">
             <li v-for="(subsection, index) in section.type" :key="index">
-              <a :href="subsection.href" class="font-semibold uppercase">{{
+              <a :href="subsection.href" class="subsection-desktop">{{
                 subsection.title
               }}</a>
             </li>
@@ -172,5 +172,9 @@ export default {
 <style scoped>
 .menu-design {
   @apply bg-base-100 rounded-box shadow-inner;
+}
+
+.subsection-desktop {
+  @apply hover:bg-base-content/[0.1] font-semibold uppercase;
 }
 </style>
