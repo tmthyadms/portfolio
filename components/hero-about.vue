@@ -21,7 +21,7 @@
         >
           <a
             role="button"
-            :href="social.href"
+            :href="social.url"
             target="_blank"
             class="btn btn-ghost btn-square"
           >
