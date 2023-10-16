@@ -12,7 +12,7 @@ export default {
     return {
       edus: [
         {
-          program: "Bachelor in Computer Science (Hons.)",
+          program: "Bachelor's in Computer Science (Hons.)",
           school: "Management and Science University",
           tip: "CGPA",
           result: "3.82",
@@ -24,7 +24,7 @@ export default {
           result: "3.86",
         },
         {
-          program: "Pure Science and Computer Science",
+          program: "Pure Science & Computer Science",
           school: "SMK Tansau",
           tip: "SPM",
           result: "8A 1B",
