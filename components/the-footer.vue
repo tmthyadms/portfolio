@@ -1,6 +1,10 @@
 <template>
   <footer>
-    <div data-aos="fade-up" class="spacer spacer-art"></div>
+    <div
+      data-aos="fade-up"
+      data-aos-once="true"
+      class="spacer spacer-art"
+    ></div>
     <div class="custom-footer py-10 bg-primary text-primary-content">
       <p class="text-sm font-semibold drop-shadow-sm">
         Built with 💖 by
