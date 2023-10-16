@@ -1,6 +1,6 @@
 <template>
   <AppHero title="Experience">
-    <div class="stack">
+    <div data-aos="flip-down" class="stack">
       <CardExp v-for="(exp, index) in exps" :key="index" :exp="exp" />
     </div>
   </AppHero>

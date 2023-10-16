@@ -1,6 +1,6 @@
 <template>
   <AppHero title="Education">
-    <AppCard class="app-border shadow-inner">
+    <AppCard data-aos="flip-down" class="app-border shadow-inner">
       <StepsEdu :edus="edus" />
     </AppCard>
   </AppHero>

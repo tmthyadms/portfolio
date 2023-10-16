@@ -4,6 +4,7 @@
       <AppFlipCard
         v-for="(sideProject, index) in sideProjects"
         :key="index"
+        :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
         :flipID="index"
         flip-name="side-projects"
       >
