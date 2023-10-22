@@ -13,7 +13,8 @@ export default {
       exps: [
         {
           role: "Frontend Intern",
-          company: "Benefit Solutions Pte Ltd",
+          company:
+            'Benefit Solutions<br class="inline" /><span class="hidden lg:inline">&nbsp;</span>Pte Ltd',
           companyUrl: "https://www.benefitsolutions.com.sg",
           duration: "Aug 2023 - Jan 2024",
           desc: "",

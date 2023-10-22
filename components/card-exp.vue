@@ -1,23 +1,22 @@
 <template>
   <AppCard class="group min-h-[24rem] app-border shadow-inner overflow-hidden">
-    <h2 class="m-auto font-black text-3xl lg:text-4xl text-base-content/[0.25]">
-      Benefit Solutions<br class="inline" /><span class="hidden lg:inline"
-        >&nbsp;</span
-      >Pte Ltd
-    </h2>
+    <h2
+      class="m-auto font-black text-3xl lg:text-4xl text-base-content/[0.25]"
+      v-html="exp.company"
+    ></h2>
     <div
-      class="space-y-2 translate-y-full group-hover:translate-y-0 transition duration-500 ease-out"
+      class="space-y-2 lg:translate-y-full lg:group-hover:translate-y-0 transition duration-500 ease-out"
     >
       <h3
-        class="card-title text-lg lg:text-xl -translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"
+        class="card-title text-lg lg:text-xl lg:-translate-y-full lg:group-hover:translate-y-0 transition-transform duration-500 ease-out"
       >
         {{ exp.role }}
         <IconArrowRight
-          class="group-hover:animate-none group-hover:translate-x-1 group-hover:opacity-0 transition duration-300"
+          class="hidden lg:block lg:group-hover:animate-none lg:group-hover:translate-x-1 lg:group-hover:opacity-0 transition duration-300"
         />
       </h3>
       <div
-        class="space-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out group-hover:ease-in"
+        class="space-y-2 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 ease-out lg:group-hover:ease-in"
       >
         <p class="text-xs text-start opacity-60">
           <span v-if="exp?.desc">{{ exp.desc }}</span>
