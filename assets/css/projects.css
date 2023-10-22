@@ -1,5 +1,5 @@
 :deep(.flip-card) {
-  @apply flex-1 hover:-translate-y-1 transition-transform duration-200 ease-out;
+  @apply flex-1 hover:!-translate-y-1 transition-transform duration-200 ease-out;
 }
 
 :deep(.flip-card-inner) {
