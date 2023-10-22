@@ -20,21 +20,7 @@
           />
         </template>
         <template #back>
-          <p>
-            <span v-if="sideProject?.remarks">
-              {{ sideProject.remarks }}
-              <br /><br />
-            </span>
-            <span>Learn more:</span>
-            <span class="tooltip tooltip-bottom" :data-tip="sideProject.url"
-              ><a
-                :href="sideProject.url"
-                target="_blank"
-                class="link link-accent link-hover"
-                >{{ sideProject?.urlTitle ?? sideProject.title }}</a
-              ></span
-            >
-          </p>
+          <ProjectFlipCardBack :project="sideProject" />
         </template>
       </AppFlipCard>
     </div>
@@ -43,6 +29,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+import ProjectFlipCardBack from "./project-flip-card-back.vue";
 
 export default {
   data() {
@@ -90,6 +77,7 @@ export default {
         : "projects/portfolio-dark.png";
     },
   },
+  components: { ProjectFlipCardBack },
 };
 </script>
 

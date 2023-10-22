@@ -21,23 +21,7 @@
           />
         </template>
         <template #back>
-          <p>
-            <span v-if="mainProject?.remarks">
-              {{ mainProject.remarks }}
-              <br /><br />
-            </span>
-            <span>Learn more:</span>
-            <span
-              class="tooltip tooltip-info tooltip-bottom"
-              :data-tip="mainProject.url"
-              ><a
-                :href="mainProject.url"
-                target="_blank"
-                class="link link-accent link-hover"
-                >{{ mainProject?.urlTitle ?? mainProject.title }}</a
-              ></span
-            >
-          </p>
+          <ProjectFlipCardBack :project="mainProject" />
         </template>
       </AppFlipCard>
     </div>
