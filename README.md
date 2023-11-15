@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 A website to showcase my work and skills effectively.
 
 ## Website
