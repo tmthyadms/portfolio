@@ -5,7 +5,7 @@
         v-for="(mainProject, index) in mainProjects"
         :key="index"
         :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
-        :flipID="index"
+        :flip-id="index"
         flip-name="main-projects"
       >
         <template #front>
@@ -21,7 +21,7 @@
           />
         </template>
         <template #back>
-          <ProjectFlipCardBack :project="mainProject" />
+          <FlipCardBackProject :project="mainProject" />
         </template>
       </AppFlipCard>
     </div>

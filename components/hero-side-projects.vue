@@ -5,7 +5,7 @@
         v-for="(sideProject, index) in sideProjects"
         :key="index"
         :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
-        :flipID="index"
+        :flip-id="index"
         flip-name="side-projects"
       >
         <template #front>
@@ -20,7 +20,7 @@
           />
         </template>
         <template #back>
-          <ProjectFlipCardBack :project="sideProject" />
+          <FlipCardBackProject :project="sideProject" />
         </template>
       </AppFlipCard>
     </div>
@@ -29,7 +29,6 @@
 
 <script>
 import { mapGetters } from "vuex";
-import ProjectFlipCardBack from "./project-flip-card-back.vue";
 
 export default {
   data() {
@@ -77,7 +76,6 @@ export default {
         : "projects/portfolio-dark.png";
     },
   },
-  components: { ProjectFlipCardBack },
 };
 </script>
 
