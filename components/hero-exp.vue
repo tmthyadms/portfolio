@@ -18,7 +18,7 @@ export default {
           companyUrl: "https://www.benefitsolutions.com.sg",
           duration: "Aug 2023 - Jan 2024",
           desc: "",
-          skills: ["Nuxt.js", "Vue.js", "Gitlab"],
+          skills: ["Nuxt.js", "Vue.js", "Playwright", "Gitlab"],
         },
       ],
     };
