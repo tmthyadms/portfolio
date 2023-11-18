@@ -1,5 +1,5 @@
 <template>
-  <div :id="flipIDAttr" class="flip-card group" @click="flip">
+  <div :id="flipIdAttr" class="flip-card group" @click="flip">
     <div class="flip-card-inner">
       <div class="flip-card-front">
         <slot name="front"></slot>
@@ -14,7 +14,7 @@
 <script>
 export default {
   props: {
-    flipID: {
+    flipId: {
       type: Number,
       default: 0,
     },
@@ -25,20 +25,20 @@ export default {
   },
   data() {
     return {
-      flipIDAttr: null,
+      flipIdAttr: null,
     };
   },
   computed: {
-    newFlipID() {
-      return `flip-card-${this.flipName}-${this.flipID}`;
+    newFlipId() {
+      return `flip-card-${this.flipName}-${this.flipId}`;
     },
   },
   mounted() {
-    this.flipIDAttr = this.newFlipID;
+    this.flipIdAttr = this.newFlipId;
   },
   methods: {
     flip() {
-      const flipCard = document.getElementById(this.flipIDAttr);
+      const flipCard = document.getElementById(this.flipIdAttr);
       flipCard.classList.toggle("clicked");
     },
   },
