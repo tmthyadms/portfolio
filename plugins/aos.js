@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 
 Vue.use(
   AOS.init({
-    offset: 200,
+    // offset: 200,
     easing: "ease-out-sine",
     mirror: true,
   })
