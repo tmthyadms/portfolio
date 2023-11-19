@@ -1,5 +1,15 @@
 <template>
   <AppCard class="group min-h-[24rem] app-border shadow-inner overflow-hidden">
+    <div
+      class="hidden lg:inline-block tooltip tooltip-secondary tooltip-left self-end"
+      data-tip="Current work"
+    >
+      <div
+        class="p-1.5 rounded-box outline outline-1 outline-base-content/[0.2]"
+      >
+        <IconBriefcase />
+      </div>
+    </div>
     <h2
       class="m-auto font-serif font-black text-3xl lg:text-4xl text-base-content/[0.25]"
       v-html="exp.company"
@@ -25,8 +35,16 @@
       <div
         class="space-y-2 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 ease-out lg:group-hover:ease-in"
       >
-        <div class="text-xs text-start" :class="{ 'opacity-60': exp?.desc }">
-          <span v-if="exp?.desc">{{ exp.desc }}</span>
+        <div class="space-y-2" :class="{ 'opacity-60': exp?.desc }">
+          <p
+            class="flex items-center lg:hidden gap-1 text-xs text-start opacity-60"
+          >
+            <IconAsterisk :width="8" class="fill-secondary" />
+            <span>Current work</span>
+          </p>
+          <p v-if="exp?.desc" class="text-sm text-start opacity-60">
+            {{ exp.desc }}
+          </p>
           <template v-else>
             <div class="flex flex-col gap-2">
               <div class="skeleton w-full h-4"></div>
