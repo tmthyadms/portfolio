@@ -13,7 +13,7 @@
           <slot name="title">
             <h1
               v-if="title"
-              class="font-thin text-3xl md:text-4xl lg:text-5xl font-capitalize"
+              class="font-thin text-3xl md:text-4xl lg:text-5xl"
               :class="desc ? 'mb-4' : 'mb-6'"
             >
               {{ title }}
@@ -21,7 +21,7 @@
           </slot>
           <p
             v-if="desc"
-            class="mb-6 font-thin text-sm md:text-base lg:text-2xl opacity-60"
+            class="mb-6 text-sm md:text-base lg:text-2xl opacity-60"
             v-html="desc"
           ></p>
         </div>
