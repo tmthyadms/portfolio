@@ -1,7 +1,7 @@
 <template>
   <AppCard class="group min-h-[24rem] app-border shadow-inner overflow-hidden">
     <h2
-      class="m-auto font-black text-3xl lg:text-4xl text-base-content/[0.25]"
+      class="m-auto font-serif font-black text-3xl lg:text-4xl text-base-content/[0.25]"
       v-html="exp.company"
     ></h2>
     <div
