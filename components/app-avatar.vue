@@ -35,6 +35,6 @@ export default {
 
 <style scoped>
 .avatar-ring {
-  @apply outline outline-4 outline-primary outline-double outline-offset-4;
+  @apply outline outline-4 outline-primary outline-dashed outline-offset-4;
 }
 </style>
