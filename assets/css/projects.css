@@ -1,5 +1,5 @@
 .projects {
-  @apply grid grid-cols-1 lg:grid-cols-2 grid-flow-row app-gap;
+  @apply grid grid-cols-1 lg:grid-cols-2 grid-flow-row;
 }
 
 :deep(.flip-card) {

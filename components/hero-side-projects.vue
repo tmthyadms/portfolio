@@ -1,6 +1,6 @@
 <template>
   <AppHero title="Side Projects" desc="Learn more by clicking on a project.">
-    <div class="projects">
+    <div class="projects app-gap">
       <AppFlipCard
         v-for="(sideProject, index) in sideProjects"
         :key="index"
