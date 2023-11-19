@@ -5,7 +5,7 @@
       <br /><br />
     </span>
     <span>Learn more:</span>
-    <span class="tooltip tooltip-info tooltip-bottom" :data-tip="project.url"
+    <span class="tooltip tooltip-primary tooltip-bottom" :data-tip="project.url"
       ><a
         :href="project.url"
         target="_blank"

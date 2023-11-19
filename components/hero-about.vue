@@ -16,7 +16,7 @@
       <div class="flex justify-center lg:justify-normal mb-6">
         <div
           v-for="social in socials"
-          class="tooltip tooltip-info"
+          class="tooltip tooltip-primary"
           :data-tip="social.tip"
         >
           <a
@@ -44,7 +44,7 @@
       <span class="block lg:inline text-xs md:text-base"
         >or download it
         <span
-          class="tooltip tooltip-info tooltip-bottom"
+          class="tooltip tooltip-primary tooltip-bottom"
           data-tip="timothy-resume.pdf"
         >
           <a
