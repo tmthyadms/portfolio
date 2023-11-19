@@ -118,11 +118,11 @@ export default {
           title: "Projects",
           type: [
             {
-              title: "Main Projects",
-              href: "#main-projects",
+              title: "Featured projects",
+              href: "#feat-projects",
             },
             {
-              title: "Side Projects",
+              title: "Side projects",
               href: "#side-projects",
             },
           ],
