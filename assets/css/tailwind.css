@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer utilities {
-  .app-flex {
-    @apply flex flex-col lg:flex-row flex-wrap gap-x-6 gap-y-6 lg:gap-y-12;
+  .app-gap {
+    @apply gap-x-6 gap-y-6 lg:gap-y-12;
   }
 
   .app-border {
