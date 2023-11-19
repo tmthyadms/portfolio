@@ -7,7 +7,7 @@
       class="spacer spacer-art"
     ></div>
     <div class="custom-footer py-10 bg-primary text-primary-content">
-      <p class="text-sm font-semibold drop-shadow-sm">
+      <p class="text-sm font-medium drop-shadow-sm">
         Built with 💖 by
         <span
           class="tooltip"

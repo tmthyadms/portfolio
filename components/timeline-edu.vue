@@ -23,7 +23,7 @@
             >{{ edu.date.start.year }}&mdash;{{ edu.date.end.year }}</time
           >
           <p class="text-sm md:text-base">
-            <strong>{{ edu.program }}</strong>
+            <strong class="font-medium">{{ edu.program }}</strong>
           </p>
           <p class="mb-2 text-xs opacity-60">
             {{ edu.school }}

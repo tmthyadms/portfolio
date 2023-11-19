@@ -22,14 +22,14 @@
                 v-for="(subsection, index) in section.type"
                 :key="index"
                 :href="subsection.href"
-                class="text-xs md:text-sm font-semibold"
+                class="text-xs md:text-sm font-medium"
                 >{{ subsection.title }}</a
               >
             </template>
             <a
               v-else
               :href="section.href"
-              class="text-xs md:text-sm font-semibold"
+              class="text-xs md:text-sm font-medium"
               >{{ section.title }}</a
             >
           </li>
@@ -50,7 +50,7 @@
           <label
             role="button"
             tabindex="0"
-            class="btn btn-sm btn-ghost font-semibold"
+            class="btn btn-sm btn-ghost font-medium"
             >{{ section.title }}
             <IconCaretDownFill />
           </label>
@@ -70,7 +70,7 @@
           :key="index"
           role="button"
           :href="section.href"
-          class="btn btn-sm btn-ghost font-semibold"
+          class="btn btn-sm btn-ghost font-medium"
           >{{ section.title }}</a
         >
       </template>
@@ -184,6 +184,6 @@ export default {
 }
 
 .subsection-desktop {
-  @apply hover:bg-base-content/[0.1] font-semibold;
+  @apply hover:bg-base-content/[0.1] font-medium;
 }
 </style>

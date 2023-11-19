@@ -9,7 +9,7 @@
     <template #title>
       <h1
         id="introduce"
-        class="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold"
+        class="mb-4 font-thin text-3xl md:text-4xl lg:text-5xl"
       ></h1>
     </template>
     <template>
