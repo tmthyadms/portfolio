@@ -3,13 +3,14 @@
     <div
       data-aos="fade-up"
       data-aos-once="true"
+      data-aos-offset="150"
       class="spacer spacer-art"
     ></div>
     <div class="custom-footer py-10 bg-primary text-primary-content">
       <p class="text-sm font-semibold drop-shadow-sm">
         Built with 💖 by
         <span
-          class="tooltip tooltip-info"
+          class="tooltip"
           data-tip="https://github.com/tmthyadms"
           target="_blank"
         >
