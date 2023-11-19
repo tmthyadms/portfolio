@@ -7,7 +7,9 @@
       <li :key="index">
         <hr
           v-if="index !== 0"
-          :class="{ 'bg-success': edu.completed && index - 1 !== 0 }"
+          :class="{
+            'bg-success': edu.completed && index - 1 !== 0,
+          }"
         />
         <div
           :data-aos="aos(index)"
@@ -65,7 +67,10 @@
         </div>
         <hr
           v-if="index !== edus.length - 1"
-          :class="{ 'bg-success': edu.completed }"
+          :class="{
+            'bg-success': edu.completed,
+            'bg-base-300': !edu.completed,
+          }"
         />
       </li>
     </template>
