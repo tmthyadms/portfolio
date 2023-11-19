@@ -1,7 +1,7 @@
 <template>
   <header
     id="header"
-    class="navbar sticky top-0 z-30 px-8 justify-between bg-base-100 bg-opacity-90 backdrop-blur transition-shadow duration-300"
+    class="navbar sticky top-0 z-30 px-4 lg:px-8 justify-between bg-base-100 bg-opacity-90 backdrop-blur transition-shadow duration-300"
   >
     <div class="navbar-start">
       <!-- Mobile navigation -->
