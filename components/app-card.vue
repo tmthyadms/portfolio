@@ -1,5 +1,5 @@
 <template>
-  <div class="card max-w-sm md:max-w-md" :class="{ 'card-theme': theme }">
+  <div class="card" :class="{ 'card-theme': theme }">
     <div class="card-body">
       <slot>
         <h2 class="card-title">
@@ -9,10 +9,10 @@
           </div>
           <div v-if="info" class="hidden lg:block ml-auto">
             <span
-              class="tooltip tooltip-info tooltip-left font-normal"
+              class="tooltip tooltip-primary tooltip-left font-normal"
               :data-tip="info"
             >
-              <IconInfoCircleFill />
+              <IconInfoLg class="outline outline-1 rounded-box" />
             </span>
           </div>
         </h2>
@@ -24,7 +24,7 @@
           <div
             v-for="(badge, index) in badges"
             :key="index"
-            class="badge badge-sm badge-outline badge-success"
+            class="badge badge-sm badge-outline badge-info"
           >
             {{ badge }}
           </div>
