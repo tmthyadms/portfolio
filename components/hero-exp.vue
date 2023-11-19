@@ -16,7 +16,16 @@ export default {
           company:
             'Benefit Solutions<br class="inline" /><span class="hidden lg:inline">&nbsp;</span>Pte Ltd',
           companyUrl: "https://www.benefitsolutions.com.sg",
-          duration: "Aug 2023 - Jan 2024",
+          date: {
+            start: {
+              month: "Aug",
+              year: "2023",
+            },
+            end: {
+              month: "Jan",
+              year: "2024",
+            },
+          },
           desc: "",
           skills: ["Nuxt.js", "Vue.js", "Playwright", "Gitlab"],
         },
