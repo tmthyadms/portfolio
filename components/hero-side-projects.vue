@@ -42,7 +42,6 @@ export default {
           title: "Portfolio",
           desc: "My digital portfolio.",
           imgSrc: "projects/portfolio-light.png",
-          badge: "NEW",
           badges: ["Nuxt 2", "Tailwind CSS", "daisyUI"],
           url: "https://github.com/tmthyadms/portfolio",
         },
