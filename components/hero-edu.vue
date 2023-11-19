@@ -1,5 +1,5 @@
 <template>
-  <AppHero title="Education">
+  <AppHero title="Education journey">
     <AppCard class="app-border max-w-md lg:max-w-none shadow-inner">
       <!-- <StepsEdu :edus="edus" /> -->
       <TimelineEdu :edus="edus" class="text-start" />
