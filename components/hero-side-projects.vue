@@ -1,12 +1,16 @@
 <template>
   <AppHero title="Side Projects" desc="Learn more by clicking on a project.">
-    <div class="app-flex">
+    <div class="projects">
       <AppFlipCard
         v-for="(sideProject, index) in sideProjects"
         :key="index"
-        :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+        :data-aos="aos(index)"
+        data-aos-offset="150"
         :flip-id="index"
         flip-name="side-projects"
+        :class="{
+          'lg:col-span-2 lg:place-self-center': isLast(index) && isEven(index),
+        }"
       >
         <template #front>
           <AppCard
@@ -16,7 +20,7 @@
             :badge="sideProject.badge"
             :badges="sideProject.badges"
             :theme="false"
-            class="h-full"
+            class="card-project"
           />
         </template>
         <template #back>
@@ -39,7 +43,7 @@ export default {
           desc: "My digital portfolio.",
           imgSrc: "projects/portfolio-light.png",
           badge: "NEW",
-          badges: ["Nuxt 2", "Vue 2", "Tailwind CSS", "daisyUI"],
+          badges: ["Nuxt 2", "Tailwind CSS", "daisyUI"],
           url: "https://github.com/tmthyadms/portfolio",
         },
         {
@@ -56,6 +60,11 @@ export default {
           url: "https://github.com/tmthyadms/sentinel",
         },
       ],
+      anims: {
+        even: "fade-right",
+        odd: "fade-left",
+        last: "fade-down",
+      },
     };
   },
   computed: {
@@ -68,12 +77,39 @@ export default {
   },
   mounted() {
     this.setPortfolioImgSrc(this.getIsDarkMode);
+    const mediaQuery = window.matchMedia("not all and (min-width: 1024px)");
+    this.aosOnMobile(mediaQuery);
+    mediaQuery.addEventListener("change", this.aosOnMobile);
   },
   methods: {
     setPortfolioImgSrc(flag) {
-      this.sideProjects[0].imgSrc = flag
+      const portfolioIndex = this.sideProjects.findIndex(
+        (project) => project.title === "Portfolio"
+      );
+      this.sideProjects[portfolioIndex].imgSrc = flag
         ? "projects/portfolio-light.png"
         : "projects/portfolio-dark.png";
+    },
+    isEven(index) {
+      return index % 2 === 0;
+    },
+    isLast(index) {
+      return index === this.sideProjects.length - 1;
+    },
+    aos(index) {
+      const isEven = this.isEven(index);
+      const isLast = this.isLast(index);
+      if (isEven) return isLast ? this.anims.last : this.anims.even;
+      else return this.anims.odd;
+    },
+    aosOnMobile(mediaQuery) {
+      if (mediaQuery.matches) {
+        this.anims.even = "fade-down";
+        this.anims.odd = "fade-down";
+      } else {
+        this.anims.even = "fade-right";
+        this.anims.odd = "fade-left";
+      }
     },
   },
 };
