@@ -29,7 +29,7 @@
             {{ edu.school }}
           </p>
           <div
-            class="tooltip tooltip-primary tooltip-bottom"
+            class="tooltip tooltip-secondary tooltip-bottom"
             :data-tip="edu.tip"
           >
             <div class="badge badge-sm badge-outline badge-info">
@@ -39,7 +39,7 @@
         </div>
         <div class="timeline-middle flex m-1">
           <div
-            class="md:tooltip md:tooltip-primary"
+            class="md:tooltip md:tooltip-secondary"
             :class="{
               'md:tooltip-right': isEven(index),
               'md:tooltip-left': !isEven(index),

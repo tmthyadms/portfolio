@@ -78,7 +78,7 @@
     <div class="navbar-end">
       <div
         id="tip-theme"
-        class="tooltip tooltip-primary tooltip-left"
+        class="tooltip tooltip-secondary tooltip-left"
         :data-tip="theme.light.tip"
       >
         <label role="button" class="btn btn-ghost btn-circle swap swap-rotate">

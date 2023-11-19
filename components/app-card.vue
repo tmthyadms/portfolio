@@ -9,7 +9,7 @@
           </div>
           <div v-if="info" class="hidden lg:block ml-auto">
             <span
-              class="tooltip tooltip-primary tooltip-left font-normal"
+              class="tooltip tooltip-secondary tooltip-left font-normal"
               :data-tip="info"
             >
               <IconInfoLg class="outline outline-1 rounded-box" />

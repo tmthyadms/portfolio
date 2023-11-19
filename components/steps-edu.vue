@@ -12,7 +12,10 @@
         <p class="mb-2 text-xs opacity-60">
           {{ edu.school }}
         </p>
-        <div class="tooltip tooltip-primary tooltip-bottom" :data-tip="edu.tip">
+        <div
+          class="tooltip tooltip-secondary tooltip-bottom"
+          :data-tip="edu.tip"
+        >
           <div class="badge badge-sm badge-outline badge-info">
             {{ edu.result }}
           </div>
