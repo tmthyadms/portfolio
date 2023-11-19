@@ -33,8 +33,8 @@ export default {
       ],
       botCarouselItems: [
         {
-          id: "main-projects",
-          component: "HeroMainProjects",
+          id: "feat-projects",
+          component: "HeroFeatProjects",
         },
         {
           id: "side-projects",
