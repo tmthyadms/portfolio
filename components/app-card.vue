@@ -12,14 +12,23 @@
               class="tooltip tooltip-secondary tooltip-left font-normal"
               :data-tip="info"
             >
-              <IconInfoLg class="outline outline-1 rounded-box" />
+              <div
+                class="p-0.5 rounded-box outline outline-1 outline-base-content/[0.2]"
+              >
+                <IconInfoLg />
+              </div>
             </span>
           </div>
         </h2>
-        <p v-if="info" class="lg:hidden text-xs text-start opacity-60">
-          <em>* {{ info }}</em>
+        <p
+          v-if="info"
+          class="lg:hidden flex items-center gap-1 text-xs text-start opacity-60"
+        >
+          <IconAsterisk :width="8" class="fill-secondary" /><span>{{
+            info
+          }}</span>
         </p>
-        <p class="text-xs text-start opacity-60">{{ desc }}</p>
+        <p class="text-sm text-start opacity-60">{{ desc }}</p>
         <div class="card-actions justify-center">
           <div
             v-for="(badge, index) in badges"
