@@ -42,6 +42,7 @@ export default {
           desc: "A website to evaluate fraudulent job posting.",
           imgSrc: "https://placehold.co/1919x1080?text=Jobzone",
           info: "Developed for GDG George Town DevHack 2023",
+          badge: "NEW",
           badges: [
             "Nuxt 2",
             "Tailwind CSS",
