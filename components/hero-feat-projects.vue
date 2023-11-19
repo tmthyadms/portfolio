@@ -1,5 +1,8 @@
 <template>
-  <AppHero title="Main Projects" desc="Learn more by clicking on a project.">
+  <AppHero
+    title="Featured projects"
+    desc="Learn more by clicking on a project."
+  >
     <div class="projects app-gap">
       <AppFlipCard
         v-for="(mainProject, index) in mainProjects"
