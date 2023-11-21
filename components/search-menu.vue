@@ -1,8 +1,10 @@
 <template>
-  <ul class="menu bg-base-100 rounded-box app-border shadow-inner">
+  <ul class="menu app-menu app-border">
     <template v-for="(result, index) in newResults">
       <li :key="index" :id="`search-item-${index}`">
-        <a role="button" :href="result.href">{{ result.title }}</a>
+        <a role="button" :href="result.href" class="menu-fix">{{
+          result.title
+        }}</a>
       </li>
     </template>
   </ul>
