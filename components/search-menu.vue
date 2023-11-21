@@ -30,6 +30,7 @@ export default {
   watch: {
     results: {
       handler() {
+        // next tick to wait for the DOM to update
         this.$nextTick(() => {
           const firstSearchItem =
             document.getElementById("search-item-0").firstChild;
