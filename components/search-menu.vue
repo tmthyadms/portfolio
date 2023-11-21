@@ -33,7 +33,7 @@ export default {
         this.$nextTick(() => {
           const firstSearchItem =
             document.getElementById("search-item-0").firstChild;
-          firstSearchItem.classList.add("focus");
+          firstSearchItem.classList.add("menu-focus");
           window.addEventListener(
             "keydown",
             (event) => {
@@ -60,8 +60,8 @@ export default {
         if (document.getElementById("search-item-0")) {
           const firstSearchItem =
             document.getElementById("search-item-0").firstChild;
-          if (firstSearchItem.classList.contains("focus"))
-            firstSearchItem.classList.remove("focus");
+          if (firstSearchItem.classList.contains("menu-focus"))
+            firstSearchItem.classList.remove("menu-focus");
         }
         if (event.code === "ArrowDown") {
           event.preventDefault();
@@ -82,3 +82,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.menu-focus {
+  @apply bg-base-content/[0.1];
+}
+</style>
