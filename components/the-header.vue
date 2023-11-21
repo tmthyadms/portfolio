@@ -3,7 +3,7 @@
     id="header"
     class="navbar sticky top-0 z-30 px-4 lg:px-8 justify-between bg-base-100 bg-opacity-90 backdrop-blur transition-shadow duration-300"
   >
-    <div class="navbar-start">
+    <div class="navbar-start gap-4">
       <!-- Mobile navigation -->
       <div class="dropdown lg:hidden mr-2">
         <label
@@ -35,13 +35,8 @@
           </li>
         </ul>
       </div>
-      <button
-        class="flex items-center gap-1 text-lg md:text-xl font-bold"
-        @click="scrollToTop"
-      >
-        <span>Timothy&nbsp;<span class="text-accent">Adams&nbsp;</span></span>
-        <IconPatchCheck class="fill-info" />
-      </button>
+      <AppComboMark />
+      <InputSearch class="flex-1" />
     </div>
     <div class="navbar-center hidden lg:flex">
       <!-- Desktop navigation -->
@@ -170,9 +165,6 @@ export default {
         if (window.scrollY > 0) header.classList.add("shadow", "ease-out");
         else header.classList.remove("shadow", "ease-in");
       };
-    },
-    scrollToTop() {
-      window.scrollTo({ top: 0 });
     },
   },
 };
