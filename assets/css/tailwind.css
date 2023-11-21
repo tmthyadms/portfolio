@@ -14,6 +14,16 @@
   .spacer {
     @apply bg-cover aspect-[960/540];
   }
+
+  .menu-fix {
+    @apply hover:bg-base-content/[0.1] focus:bg-base-content/[0.1];
+  }
+}
+
+@layer components {
+  .app-menu {
+    @apply bg-base-100 rounded-box shadow-inner;
+  }
 }
 
 html {
