@@ -30,7 +30,7 @@
               v-else
               :href="section.href"
               class="text-xs md:text-sm font-medium"
-              >{{ section.title }}</a
+              >{{ section?.altTitle ?? section.title }}</a
             >
           </li>
         </ul>
@@ -46,7 +46,7 @@
             role="button"
             tabindex="0"
             class="btn btn-sm btn-ghost font-medium"
-            >{{ section.title }}
+            >{{ section?.altTitle ?? section.title }}
             <IconCaretDownFill />
           </label>
           <ul
@@ -66,7 +66,7 @@
           role="button"
           :href="section.href"
           class="btn btn-sm btn-ghost font-medium"
-          >{{ section.title }}</a
+          >{{ section?.altTitle ?? section.title }}</a
         >
       </template>
     </div>
