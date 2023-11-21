@@ -5,8 +5,9 @@
   >
     <div class="projects app-gap">
       <AppFlipCard
-        v-for="(mainProject, index) in mainProjects"
+        v-for="(featProject, index) in featProjects"
         :key="index"
+        role="button"
         :data-aos="aos(index)"
         data-aos-offset="150"
         :flip-id="index"
@@ -17,18 +18,18 @@
       >
         <template #front>
           <AppCard
-            :title="mainProject.title"
-            :desc="mainProject.desc"
-            :imgSrc="mainProject.imgSrc"
-            :info="mainProject.info"
-            :badge="mainProject.badge"
-            :badges="mainProject.badges"
+            :title="featProject.title"
+            :desc="featProject.desc"
+            :imgSrc="featProject.imgSrc"
+            :info="featProject.info"
+            :badge="featProject.badge"
+            :badges="featProject.badges"
             :theme="false"
             class="card-project"
           />
         </template>
         <template #back>
-          <FlipCardBackProject :project="mainProject" />
+          <FlipCardBackProject :project="featProject" />
         </template>
       </AppFlipCard>
     </div>
@@ -36,45 +37,12 @@
 </template>
 
 <script>
+import featProjects from "@/assets/data/featured-projects.json";
+
 export default {
   data() {
     return {
-      mainProjects: [
-        {
-          title: "Jobzone",
-          desc: "A website to evaluate fraudulent job posting.",
-          imgSrc: "https://placehold.co/1919x1080?text=Jobzone",
-          info: "Developed for GDG George Town DevHack 2023",
-          badge: "NEW",
-          badges: [
-            "Nuxt 2",
-            "Tailwind CSS",
-            "daisyUI",
-            "Flask",
-            "MongoDB",
-            "Python",
-            "XGBoost",
-          ],
-          url: "https://github.com/tmthyadms/jobzone",
-        },
-        {
-          title: "LockNRoll",
-          desc: "A mobile app for controlling custom-built smart door lock remotely.",
-          imgSrc: "projects/locknroll.png",
-          info: "Developed for Bachelor's final year project",
-          badges: ["Flutter", "Firebase", "Arduino"],
-          url: "https://github.com/tmthyadms/locknroll",
-        },
-        {
-          title: "EyeBuddy",
-          desc: "A mobile app for detecting dry eye syndrome.",
-          imgSrc: "projects/eyebuddy.png",
-          info: "Developed for Apps Innovation Challenge (AIC) 2022",
-          badges: ["Flutter", "Firebase", "Python", "OpenCV"],
-          url: "https://shorturl.at/yHJR5",
-          remarks: "Check out EyeBuddy on my LinkedIn's project.",
-        },
-      ],
+      featProjects,
       anims: {
         even: "fade-right",
         odd: "fade-left",
@@ -92,7 +60,7 @@ export default {
       return index % 2 === 0;
     },
     isLast(index) {
-      return index === this.mainProjects.length - 1;
+      return index === this.featProjects.length - 1;
     },
     aos(index) {
       const isEven = this.isEven(index);

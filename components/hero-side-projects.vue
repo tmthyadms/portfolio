@@ -4,6 +4,7 @@
       <AppFlipCard
         v-for="(sideProject, index) in sideProjects"
         :key="index"
+        role="button"
         :data-aos="aos(index)"
         data-aos-offset="150"
         :flip-id="index"
@@ -32,27 +33,13 @@
 </template>
 
 <script>
+import sideProjects from "@/assets/data/side-projects.json";
 import { mapGetters } from "vuex";
 
 export default {
   data() {
     return {
-      sideProjects: [
-        {
-          title: "Portfolio",
-          desc: "My digital portfolio.",
-          imgSrc: "projects/portfolio-light.png",
-          badges: ["Nuxt 2", "Tailwind CSS", "daisyUI"],
-          url: "https://github.com/tmthyadms/portfolio",
-        },
-        {
-          title: "Sentinel",
-          desc: "An AI-powered virtual assessment proctoring.",
-          imgSrc: "projects/sentinel.png",
-          badges: ["PHP 8", "Bootstrap 5", "face-api.js", "MariaDB"],
-          url: "https://github.com/tmthyadms/sentinel",
-        },
-      ],
+      sideProjects,
       anims: {
         even: "fade-right",
         odd: "fade-left",
