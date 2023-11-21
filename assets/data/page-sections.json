@@ -1,0 +1,29 @@
+[
+  {
+    "title": "About",
+    "href": "#about"
+  },
+  {
+    "title": "Work experience",
+    "altTitle": "Experience",
+    "href": "#experience"
+  },
+  {
+    "title": "Education journey",
+    "altTitle": "Education",
+    "href": "#education"
+  },
+  {
+    "title": "Projects",
+    "type": [
+      {
+        "title": "Featured projects",
+        "href": "#feat-projects"
+      },
+      {
+        "title": "Side projects",
+        "href": "#side-projects"
+      }
+    ]
+  }
+]
