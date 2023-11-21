@@ -7,29 +7,12 @@
 </template>
 
 <script>
+import exps from "@/assets/data/experiences.json";
+
 export default {
   data() {
     return {
-      exps: [
-        {
-          role: "Frontend Intern",
-          company:
-            'Benefit Solutions<br class="inline" /><span class="hidden lg:inline">&nbsp;</span>Pte Ltd',
-          companyUrl: "https://www.benefitsolutions.com.sg",
-          date: {
-            start: {
-              month: "Aug",
-              year: "2023",
-            },
-            end: {
-              month: "Jan",
-              year: "2024",
-            },
-          },
-          desc: "",
-          skills: ["Nuxt.js", "Vue.js", "Playwright", "Gitlab"],
-        },
-      ],
+      exps,
     };
   },
 };

@@ -91,38 +91,13 @@
 </template>
 
 <script>
+import sections from "@/assets/data/page-sections.json";
 import { mapMutations } from "vuex";
 
 export default {
   data() {
     return {
-      sections: [
-        {
-          title: "About",
-          href: "#about",
-        },
-        {
-          title: "Experience",
-          href: "#experience",
-        },
-        {
-          title: "Education",
-          href: "#education",
-        },
-        {
-          title: "Projects",
-          type: [
-            {
-              title: "Featured projects",
-              href: "#feat-projects",
-            },
-            {
-              title: "Side projects",
-              href: "#side-projects",
-            },
-          ],
-        },
-      ],
+      sections,
       theme: {
         light: {
           current: "cupcake",
