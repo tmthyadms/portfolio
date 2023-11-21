@@ -19,8 +19,8 @@
 </template>
 
 <script>
-// import { distance } from "fastest-levenshtein";
-import distance from "jaro-winkler";
+import { distance } from "fastest-levenshtein";
+// import distance from "jaro-winkler";
 
 export default {
   data() {
@@ -73,10 +73,11 @@ export default {
       });
     },
     updateResults(section, input) {
-      const isIncluded = this.results.some(
-        (result) => result.title === section.title
-      );
-      if (isIncluded) return;
+      // WARNING: this causes the results not to be updated
+      // const isIncluded = this.results.some(
+      //   (result) => result.title === section.title
+      // );
+      // if (isIncluded) return;
       const sectionTitle = section.title;
       const lowerSectionTitle = sectionTitle.toLowerCase();
       const lowerInput = input.toLowerCase();
@@ -88,13 +89,16 @@ export default {
           },
         };
         this.results.push(result);
+        this.sortResults();
       }
     },
     sortResults() {
-      this.results.sort((a, b) => b.distance - a.distance);
+      // levenstein distance sorting: a - b (ascending)
+      // jaro-winkler distance sorting: b - a (descending)
+      this.results.sort((a, b) => a.distance - b.distance);
     },
     quickSearch(event) {
-      if (this.results.length > 0) this.sortResults();
+      this.results = []; // reset results to get new results
       const input = event.target.value;
       if (input.length > 0) {
         this.sections.forEach((section) => {
@@ -107,8 +111,6 @@ export default {
             this.updateResults(section, input);
           }
         });
-      } else {
-        this.results = [];
       }
     },
   },
