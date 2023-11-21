@@ -57,10 +57,12 @@ export default {
   methods: {
     arrowNavigation() {
       window.addEventListener("keydown", (event) => {
+        if (this.newResults.length <= 1) return;
+        const isArrow = ["ArrowDown", "ArrowUp"].includes(event.code);
         if (document.getElementById("search-item-0")) {
           const firstSearchItem =
             document.getElementById("search-item-0").firstChild;
-          if (firstSearchItem.classList.contains("menu-focus"))
+          if (firstSearchItem.classList.contains("menu-focus") && isArrow)
             firstSearchItem.classList.remove("menu-focus");
         }
         if (event.code === "ArrowDown") {
@@ -72,7 +74,8 @@ export default {
         } else if (event.code === "ArrowUp") {
           event.preventDefault();
           this.selected =
-            (this.selected - 1 + this.maxResults) % this.newResults.length;
+            (this.selected - 1 + this.newResults.length) %
+            this.newResults.length;
           document
             .getElementById(`search-item-${this.selected}`)
             .firstChild.focus();
