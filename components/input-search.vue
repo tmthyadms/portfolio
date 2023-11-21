@@ -19,39 +19,14 @@
 </template>
 
 <script>
+import sections from "@/assets/data/page-sections.json";
 import { distance } from "fastest-levenshtein";
 // import distance from "jaro-winkler";
 
 export default {
   data() {
     return {
-      sections: [
-        {
-          title: "About",
-          href: "#about",
-        },
-        {
-          title: "Work experience",
-          href: "#experience",
-        },
-        {
-          title: "Education journey",
-          href: "#education",
-        },
-        {
-          title: "Projects",
-          type: [
-            {
-              title: "Featured projects",
-              href: "#feat-projects",
-            },
-            {
-              title: "Side projects",
-              href: "#side-projects",
-            },
-          ],
-        },
-      ],
+      sections,
       results: [],
       searchMenu: null,
     };
@@ -79,13 +54,17 @@ export default {
       // );
       // if (isIncluded) return;
       const sectionTitle = section.title;
+      const sectionAltTitle = section?.altTitle;
       const lowerSectionTitle = sectionTitle.toLowerCase();
       const lowerInput = input.toLowerCase();
-      if (lowerSectionTitle.includes(lowerInput)) {
+      if (
+        lowerSectionTitle.includes(lowerInput) ||
+        (sectionAltTitle && sectionAltTitle.toLowerCase().includes(lowerInput))
+      ) {
         const result = {
           ...section,
           ...{
-            distance: distance(sectionTitle, input),
+            distance: distance(sectionAltTitle ?? sectionTitle, input),
           },
         };
         this.results.push(result);
