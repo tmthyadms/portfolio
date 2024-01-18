@@ -1,17 +1,17 @@
 <template>
-  <div class="relative hidden lg:flex max-w-xs">
+  <div class="relative hidden max-w-xs lg:flex">
     <IconSearch :width="14" class="input-content start-3" />
     <input
       id="search"
       type="search"
-      placeholder="Quick search..."
-      class="input input-sm input-bordered w-full !ps-8 !pe-[4.25rem]"
+      placeholder="Search"
+      class="input input-bordered input-sm w-full !pe-[4.25rem] !ps-8"
       @input="quickSearch"
     />
     <template v-if="results.length > 0">
       <SearchMenu :results="results" class="absolute top-10 w-full" />
     </template>
-    <div class="flex gap-1 input-content end-3">
+    <div class="input-content end-3 flex gap-1">
       <kbd class="kbd kbd-xs">ctrl</kbd>
       <kbd class="kbd kbd-xs">k</kbd>
     </div>
