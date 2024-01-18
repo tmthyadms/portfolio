@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between min-h-screen">
+  <div class="flex min-h-screen flex-col justify-between">
     <TheHeader />
     <main class="flex-1">
       <!-- Top section -->
@@ -37,8 +37,8 @@ export default {
           component: "HeroFeatProjects",
         },
         {
-          id: "side-projects",
-          component: "HeroSideProjects",
+          id: "other-projects",
+          component: "HeroOtherProjects",
         },
       ],
     };
