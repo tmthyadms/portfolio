@@ -42,11 +42,11 @@
             <IconAsterisk :width="8" class="fill-secondary" />
             <span>Current work</span>
           </p>
-          <p
+          <div
             v-if="exp?.desc"
             class="text-start text-sm opacity-60"
             v-html="exp.desc"
-          ></p>
+          ></div>
           <template v-else>
             <div class="flex flex-col gap-2">
               <div class="skeleton h-4 w-full"></div>
