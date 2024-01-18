@@ -10,7 +10,6 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
     "aos": "^2.3.4",
     "bootstrap-icons": "^1.11.1",
     "core-js": "^3.25.3",
@@ -27,6 +26,7 @@
     "@nuxtjs/tailwindcss": "^5.3.3",
     "@tailwindcss/typography": "^0.5.10",
     "daisyui": "^4.4.2",
-    "postcss": "^8.4.17"
+    "prettier": "^3.2.4",
+    "prettier-plugin-tailwindcss": "^0.5.11"
   }
 }
