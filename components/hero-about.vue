@@ -1,6 +1,6 @@
 <template>
   <AppHero
-    desc="A final year Computer Science student with expertize in web development using <em>Vue.js</em>, <em>Tailwind CSS</em>, and <em>Bootstrap</em> as well as mobile development using <em>Flutter</em>."
+    desc="A final year Computer Science student with expertize in web development using <em>Vue.js</em>, <em>Tailwind CSS</em>, and <em>Bootstrap</em> as well as experienced in mobile development using <em>Flutter</em>."
     :center="false"
   >
     <template #figure>
@@ -9,11 +9,11 @@
     <template #title>
       <h1
         id="introduce"
-        class="mb-4 font-thin text-3xl md:text-4xl lg:text-5xl"
+        class="mb-4 text-3xl font-thin md:text-4xl lg:text-5xl"
       ></h1>
     </template>
     <template>
-      <div class="flex justify-center lg:justify-normal mb-6">
+      <div class="mb-6 flex justify-center lg:justify-normal">
         <div
           v-for="social in socials"
           class="tooltip tooltip-secondary"
@@ -23,7 +23,7 @@
             role="button"
             :href="social.url"
             target="_blank"
-            class="btn btn-ghost btn-square"
+            class="btn btn-square btn-ghost"
           >
             <component :is="social.component" :width="32" />
           </a>
@@ -34,23 +34,23 @@
         href="resume.pdf"
         type="application/pdf"
         target="_blank"
-        class="btn btn-sm md:btn-md btn-primary btn-wide group mb-2 lg:mr-2"
+        class="group btn btn-primary btn-sm btn-wide mb-2 md:btn-md lg:mr-2"
       >
         View Resume
         <IconBoxArrowUpRight
-          class="group-hover:translate-x-1 transition-transform duration-300 group-hover:ease-out"
+          class="transition-transform duration-300 group-hover:translate-x-1 group-hover:ease-out"
         />
       </a>
-      <span class="block lg:inline text-xs md:text-base"
+      <span class="block text-xs md:text-base lg:inline"
         >or download it
         <span
-          class="tooltip tooltip-secondary tooltip-bottom"
+          class="tooltip tooltip-bottom tooltip-secondary"
           data-tip="timothy-resume.pdf"
         >
           <a
             href="resume.pdf"
             type="application/pdf"
-            class="link link-accent link-hover"
+            class="link-hover link-accent link"
             download="timothy-resume.pdf"
             >here</a
           ></span
@@ -68,7 +68,7 @@ export default {
     return {
       socials: [
         {
-          url: "https://linkedin.com/in/tmthyadms",
+          url: "https://www.linkedin.com/in/tmthyadms",
           tip: "LinkedIn",
           component: "IconLinkedin",
         },
@@ -85,12 +85,12 @@ export default {
       loop: true,
     });
     typewriter
-      .pauseFor(700)
-      .typeString("Hi, I'm Timothy!")
-      .pauseFor(300)
+      .pauseFor(750)
+      .typeString("Hello, I'm Timothy!")
+      .pauseFor(750)
       .deleteChars(5)
       .typeString("!")
-      .pauseFor(1500)
+      .pauseFor(1000)
       .start();
   },
 };
