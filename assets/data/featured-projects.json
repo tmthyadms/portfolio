@@ -1,7 +1,7 @@
 [
   {
     "title": "Jobzone",
-    "desc": "A website to evaluate fraudulent job posting.",
+    "desc": "An employment website to evaluate fraudulent job posting using machine learning.",
     "imgSrc": "https://placehold.co/1919x1080?text=Jobzone",
     "info": "Developed for GDG George Town DevHack 2023",
     "badge": "NEW",
@@ -9,16 +9,16 @@
       "Nuxt 2",
       "Tailwind CSS",
       "daisyUI",
+      "Python",
       "Flask",
       "MongoDB",
-      "Python",
       "XGBoost"
     ],
     "url": "https://github.com/tmthyadms/jobzone"
   },
   {
     "title": "LockNRoll",
-    "desc": "A mobile app for controlling custom-built smart door lock remotely.",
+    "desc": "A mobile app to control a custom-built smart door lock using Firebase.",
     "imgSrc": "projects/locknroll.png",
     "info": "Developed for Bachelor's final year project",
     "badges": ["Flutter", "Firebase", "Arduino"],
@@ -26,7 +26,7 @@
   },
   {
     "title": "EyeBuddy",
-    "desc": "A mobile app for detecting dry eye syndrome.",
+    "desc": "A mobile app to detect dry eyes' syndromes using convolutional neural network.",
     "imgSrc": "projects/eyebuddy.png",
     "info": "Developed for Apps Innovation Challenge (AIC) 2022",
     "badges": ["Flutter", "Firebase", "Python", "OpenCV"],

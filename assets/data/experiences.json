@@ -1,6 +1,6 @@
 [
   {
-    "role": "Frontend Intern",
+    "role": "Frontend Support Intern",
     "company": "Benefit Solutions<br class=\"inline\" /><span class=\"hidden lg:inline\">&nbsp;</span>Pte Ltd",
     "companyUrl": "https://www.benefitsolutions.com.sg",
     "date": {
@@ -13,7 +13,18 @@
         "year": "2024"
       }
     },
-    "desc": "",
-    "skills": ["Nuxt.js", "Vue.js", "Playwright", "Gitlab"]
+    "desc": "<ul class='list-disc list-inside'><li>Resolved front-end issues.</li><li>Developed new components.</li><li>Built an end-to-end (E2E) automated testing.</li></ul>",
+    "skills": [
+      "Nuxt",
+      "Vue.js",
+      "Bootstrap",
+      "Playwright",
+      "TypeScript",
+      "Node.js",
+      "Git",
+      "REST",
+      "Insomnia",
+      "Gitlab"
+    ]
   }
 ]

@@ -1,14 +1,14 @@
 [
   {
     "title": "Portfolio",
-    "desc": "My digital portfolio.",
+    "desc": "A website to showcase my works and skills.",
     "imgSrc": "projects/portfolio-light.png",
     "badges": ["Nuxt 2", "Tailwind CSS", "daisyUI"],
     "url": "https://github.com/tmthyadms/portfolio"
   },
   {
     "title": "Sentinel",
-    "desc": "An AI-powered virtual assessment proctoring.",
+    "desc": "An online assessment website to proctor students using artificial intelligence (AI).",
     "imgSrc": "projects/sentinel.png",
     "badges": ["PHP 8", "Bootstrap 5", "face-api.js", "MariaDB"],
     "url": "https://github.com/tmthyadms/sentinel"
