@@ -10,7 +10,11 @@
       <h1
         id="introduce"
         class="mb-4 text-3xl font-thin md:text-4xl lg:text-5xl"
-      ></h1>
+      >
+        <div
+          class="skeleton mx-auto h-9 w-60 md:h-10 md:w-72 lg:mx-[initial] lg:h-12 lg:w-96"
+        ></div>
+      </h1>
     </template>
     <template>
       <div class="mb-6 flex justify-center lg:justify-normal">
