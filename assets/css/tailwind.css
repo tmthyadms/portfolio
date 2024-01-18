@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
 @layer utilities {
   .app-gap {
     @apply gap-x-6 gap-y-6 lg:gap-y-12;
@@ -12,7 +18,7 @@
   }
 
   .spacer {
-    @apply bg-cover aspect-[960/540];
+    @apply aspect-[960/540] bg-cover;
   }
 
   .menu-fix {
@@ -22,10 +28,6 @@
 
 @layer components {
   .app-menu {
-    @apply bg-base-100 rounded-box shadow-inner;
+    @apply rounded-box bg-base-100 shadow-inner;
   }
-}
-
-html {
-  @apply scroll-smooth;
 }
