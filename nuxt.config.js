@@ -41,14 +41,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    "@nuxtjs/axios",
   ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "/",
-  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -57,19 +50,20 @@ export default {
     port: 5000,
   },
 
-  tailwindcss: {
-    config: {
-      theme: {
-        extend: {
-          colors: {},
-        },
-      },
-      plugins: [require("@tailwindcss/typography"), require("daisyui")],
-      daisyui: {
-        themes: ["cupcake", "synthwave", "aqua"],
-      },
-    },
-  },
+  // use tailwind config instead to access tailwind intellisense
+  // tailwindcss: {
+  //   config: {
+  //     theme: {
+  //       extend: {
+  //         colors: {},
+  //       },
+  //     },
+  //     plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  //     daisyui: {
+  //       themes: ["cupcake", "synthwave", "aqua"],
+  //     },
+  //   },
+  // },
 
   target: "static",
 };
