@@ -1,5 +1,5 @@
 # Portfolio
-A website to showcase my work and skills effectively.
+A website to showcase my works and skills.
 
 ## Website
 Check it out [here](https://tmthyadms.com).
