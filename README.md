@@ -2,7 +2,7 @@
 A website to showcase my works and skills.
 
 ## Website
-Check it out [here](https://tmthyadms.com).
+Check it out [here](https://tmthyadms.github.io/portfolio).
 
 ## Screenshots
 <a href=""><img alt="Portfolio's About Section in Light Mode" width="720" src="https://github.com/tmthyadms/portfolio/assets/72775553/f03f805f-06f1-4498-9f0b-517c7dc0d7f6" /></a>
